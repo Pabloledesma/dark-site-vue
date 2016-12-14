@@ -23,10 +23,10 @@ Object.keys(locales).forEach(function (lang) {
 
 // Rout definitions
 const routes = [
-  { path: '/press-releases', component: PressReleases },
-  { path: '/about-us', component: About },
-  { path: '/assistance-to-family', component: Assistance },
-  { path: '/latest-news', component: LatestNews }
+  { path: '/press-releases/:lang', component: PressReleases },
+  { path: '/about-us/:lang', component: About },
+  { path: '/assistance-to-family/:lang', component: Assistance },
+  { path: '/latest-news/:lang', component: LatestNews }
 ];
 
 const router = new VueRouter({routes})
@@ -47,7 +47,22 @@ new Vue({
 
   	methods: {
   		changeLanguage(lang){
-  			Vue.config.lang = lang
-  		}
-  	}
+  			//Change the language
+        Vue.config.lang = lang
+
+        //Replace route
+        router.replace( '/' + lang )
+
+       //Crear el redireccionamiento a las rutas en su respectivo idioma sin el parametro de lenguage seleccionado
+      },
+
+      replaceRoute(){
+        let routePath = this.$route.path.split('/')
+        while( routePath.length >= 3 ){
+          routePath.pop()
+        }
+        routePath = routePath.join().replace(',', '') + '/' + this.currentLang
+        
+      }
+    }
 })
