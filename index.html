@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dark Site - Copa Airlines</title>
+    <link rel="stylesheet" type="text/css" href="src/assets/css/normalize.css">
+	<link href="src/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="src/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="src/assets/css/copa_style.css" rel="stylesheet">
+  </head>
+  <body> 
+    <div class="container" id="app">
+
+        <div class="row header">
+            <div class="logo_copa">
+                <a href="http://www.copaair.com">
+                  <img src="./src/assets/img/COPA_STAR_LOGO_BLACK.png">
+                </a>  
+            </div>
+            <div class="lang_selector">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-globe fa-3"></i></div>
+                        <select class="form-control" v-model="currentLang" @change="changeLanguage(currentLang)">
+                            <option value="en">{{ $t("optionLabel.english") }}</option>
+                            <option value="es">{{ $t("optionLabel.spanish") }}</option>
+                            <option value="pt">{{ $t("optionLabel.portuguese") }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <top-menu></top-menu> 
+ 
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
