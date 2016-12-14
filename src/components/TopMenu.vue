@@ -6,10 +6,30 @@
             </button>
         </div>
         <ul class="top-menu">
-            <li v-for="item in menu_top">
-                <a :href="item.url">
-                  {{ item.text }}
-                </a>
+            <li>
+                <router-link :to="$t('topMenu.latestNews.url')">
+                  {{ $t("topMenu.latestNews.text") }}
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="$t('topMenu.pressReleases.url')">
+                  {{ $t("topMenu.pressReleases.text") }}
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="$t('topMenu.assistance.url')">
+                  {{ $t("topMenu.assistance.text") }}
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="$t('topMenu.about.url')">
+                  {{ $t('topMenu.about.text') }}
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="$t('topMenu.copaCom.url')">
+                  {{ $t("topMenu.copaCom.text") }}
+                </router-link>
             </li>
         </ul>
 	</nav>
@@ -22,13 +42,7 @@ export default {
    
     data () {
         return {
-           menu_top: [
-					{ text: 'Latest News', url: 'content/en/latest-news-en.html' },
-					{ text: 'Press Releases', url: 'content/en/press-releases.html' },
-					{ text: 'Assistance to Family', url: 'content/en/assistance-to-family.html' },
-					{ text: 'About Copa Airlines', url: 'content/en/corporate-tabs.html' },
-					{ text: 'Go to Copa.com', url: 'http://www.copaair.com/en/web/gs'}
-				]
+          
         };
     }
 }
