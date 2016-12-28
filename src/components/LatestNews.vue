@@ -1,5 +1,5 @@
 <template>
-	<h1>Latest News</h1>
+	<h1>{{ $t("latestNewsPage.title") }}</h1>
 </template>
 
 <script>

@@ -7,11 +7,15 @@ export default {
 				portuguese: 'Portuguese'
 			},
 			topMenu: {
-				latestNews: { text: 'Latest News', url: '/latest-news' },
-				pressReleases: { text: 'Press Releases', url: '/press-releases' },
-				assistance: { text: 'Assistance to Family', url: '/assistance-to-family' },
-				about: { text: 'About Copa Airlines', url: '/about-us' },
+				latestNews: { text: 'Latest News', url: '/latest-news/en' },
+				pressReleases: { text: 'Press Releases', url: '/press-releases/en' },
+				assistance: { text: 'Assistance to Family', url: '/assistance-to-family/en' },
+				about: { text: 'About Copa Airlines', url: '/about-us/en' },
 				copaCom: { text: 'Go to copa.com', url: '/go-to-copa-com' }
+			},
+
+			latestNewsPage: {
+				title: 'Latest News'
 			}
 		},
 		es: {
@@ -21,11 +25,15 @@ export default {
 				portuguese: 'Portugués'
 			},
 			topMenu: {
-				latestNews: { text: 'Últimas Noticias', url: '/ultimas-noticias' },
-				pressReleases: { text: 'Comunicados de prensa', url: '/comunicados-de-prensa'  },
-				assistance: { text: 'Asistencia Familiar', url: '/asistencia-familiar' },
-				about: { text: 'Acerca de Copa Airlines', url: '/sobre-nosotros' },
+				latestNews: { text: 'Últimas Noticias', url: '/ultimas-noticias/es' },
+				pressReleases: { text: 'Comunicados de prensa', url: '/comunicados-de-prensa/es'  },
+				assistance: { text: 'Asistencia Familiar', url: '/asistencia-familiar/es' },
+				about: { text: 'Acerca de Copa Airlines', url: '/sobre-nosotros/es' },
 				copaCom: { text: 'Ir a copa.com', url: '/ir-a-copa-com' }
+			},
+
+			latestNewsPage: {
+				title: 'Últimas Noticias'
 			}
 		},
 		pt: {
@@ -35,11 +43,15 @@ export default {
 				portuguese: 'Português'
 			},
 			topMenu: {
-				latestNews: { text: 'Últimas Notícias', url:'/ultimas-noticias' },
-				pressReleases: { text:'Comunicados da imprensa', url:'/comunicados-da-imprensa' },
-				assistance: { text: 'Assistência à Família', url:'/assistencia-a-familia' },
-				about:{ text:'Acerca de Copa Airlines', url:'/acerca-de-copa-airlines' },
+				latestNews: { text: 'Últimas Notícias', url:'/ultimas-noticias/pt' },
+				pressReleases: { text:'Comunicados da imprensa', url:'/comunicados-da-imprensa/pt' },
+				assistance: { text: 'Assistência à Família', url:'/assistencia-a-familia/pt' },
+				about:{ text:'Acerca de Copa Airlines', url:'/acerca-de-copa-airlines/pt' },
 				copaCom: { text:'Visita copa.com', url:'/visita-copa-com' }
+			},
+
+			latestNewsPage: {
+				title: 'Últimas Notícias'
 			}
  		}
 }
