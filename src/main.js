@@ -83,8 +83,6 @@ new Vue({
         while( routePath.length >= 3 ){
           routePath.pop()
         }
-
-        console.log(this.currentLang)
         routePath = routePath.join().replace(',', '') + '/' + this.currentLang
         router.replace('/' + routePath)
         // console.log(routePath)

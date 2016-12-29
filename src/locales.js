@@ -11,7 +11,7 @@ export default {
 				pressReleases: { text: 'Press Releases', url: '/press-releases/en' },
 				assistance: { text: 'Assistance to Family', url: '/assistance-to-family/en' },
 				about: { text: 'About Copa Airlines', url: '/about-us/en' },
-				copaCom: { text: 'Go to copa.com', url: '/go-to-copa-com' }
+				copaCom: { text: 'Go to copa.com', url: 'https://www.copaair.com/en/web/gs' }
 			},
 
 			latestNewsPage: {
@@ -29,7 +29,7 @@ export default {
 				pressReleases: { text: 'Comunicados de prensa', url: '/comunicados-de-prensa/es'  },
 				assistance: { text: 'Asistencia Familiar', url: '/asistencia-familiar/es' },
 				about: { text: 'Acerca de Copa Airlines', url: '/sobre-nosotros/es' },
-				copaCom: { text: 'Ir a copa.com', url: '/ir-a-copa-com' }
+				copaCom: { text: 'Ir a copa.com', url: 'https://www.copaair.com/es/web/gs' }
 			},
 
 			latestNewsPage: {
@@ -47,7 +47,7 @@ export default {
 				pressReleases: { text:'Comunicados da imprensa', url:'/comunicados-da-imprensa/pt' },
 				assistance: { text: 'Assistência à Família', url:'/assistencia-a-familia/pt' },
 				about:{ text:'Acerca de Copa Airlines', url:'/acerca-de-copa-airlines/pt' },
-				copaCom: { text:'Visita copa.com', url:'/visita-copa-com' }
+				copaCom: { text:'Visita copa.com', url:'https://www.copaair.com/pt/web/gs' }
 			},
 
 			latestNewsPage: {

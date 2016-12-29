@@ -27,9 +27,9 @@
                 </router-link>
             </li>
             <li>
-                <router-link :to="$t('topMenu.copaCom.url')">
+                <a :href="$t('topMenu.copaCom.url')" target="_blank">
                   {{ $t("topMenu.copaCom.text") }}
-                </router-link>
+                </a>
             </li>
         </ul>
 	</nav>
