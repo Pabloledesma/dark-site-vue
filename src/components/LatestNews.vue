@@ -3,10 +3,10 @@
 		<h1>{{ $t("latestNewsPage.title") }}</h1>
 		<hr>
 		
-			<h3>{{ lastNotice.title }}</h3>
+			<h2>{{ lastNotice.title }}</h2>
+			<p>{{ lastNotice.date | formatDate }}</p>
 
 			<div v-html="lastNotice.body"></div>
-			{{ lastNotice.date | formatDate }}
 		
 	</div>
 	
@@ -29,10 +29,6 @@ import news from '../news'
 			lastNotice(){
 				return _.orderBy(this.news, 'date').pop()
 			}
-		},
-
-		mounted(){
-			console.log(this.lastNotice.pop())
 		}
 	}
 </script>

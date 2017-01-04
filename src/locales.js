@@ -18,6 +18,8 @@ export default {
 				title: 'Latest News'
 			},
 
+			
+
 			footer: {
 				col1: {
 					title: 'Customer Service',
