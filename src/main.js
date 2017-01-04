@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
 import locales from './locales'
+import moment from 'moment'
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
 import PressReleases from './components/PressReleases.vue'
@@ -50,6 +51,12 @@ const routes = [
 ];
 
 const router = new VueRouter({routes})
+
+Vue.filter('formatDate', (value) => {
+  if(value){
+    return moment(String(value)).format('MM/DD/YYYY hh:mm')
+  }
+})
 
 new Vue({
 
