@@ -33,6 +33,64 @@
 
         <top-menu></top-menu> 
         <router-view></router-view>
+
+        <footer>
+            <div class="footer-normal"">
+                <div class="grid">
+
+                    <div class="grid__row footer-title">
+                        <div class="grid__column">
+                            <h3>{{ $t("footer.col1.title") }}</h3>
+                        </div>
+                        <div class="grid__column">
+                            <h3>{{ $t("footer.col2.title") }}</h3>
+                        </div>
+                        <div class="grid__column">
+                            <h3>{{ $t("footer.col3.title") }}</h3>
+                        </div>
+                    </div>
+                    <div class="grid__row footer-content">
+                        <div class="grid__column">
+                            <ul class="footer-nav">
+                                <li><a :href=" $t('footer.col1.faq.url') ">{{ $t('footer.col1.faq.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.reservationCenter.url') ">{{ $t('footer.col1.reservationCenter.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.refundRequest.url') ">{{ $t('footer.col1.refundRequest.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.baggageClaim.url') ">{{ $t('footer.col1.baggageClaim.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.forgottenItems.url') ">{{ $t('footer.col1.forgottenItems.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.flightNotifications.url') ">{{ $t('footer.col1.flightNotifications.label') }}</a></li>
+                                <li><a href=" $t('footer.col1.optionsForCheckin.url') ">{{ $t('footer.col1.optionsForCheckin.label') }}}</a></li>
+                                <li><a href=" $t('footer.col1.commentsAndComplaints.url') ">{{$t('footer.col1.commentsAndComplaints.label')}}</a></li>
+                                <li><a href=" $t('footer.col1.contactUs.url') ">{{$t('footer.col1.contactUs.label')}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__column">
+                            <ul class="footer-nav">
+                                <li><a href=" $t('footer.col2.ourHistory.url') ">{{ $t('footer.col2.ourHistory.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.awards.url')">{{ t('footer.col2.awards.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.corporateSocialResponsability.url')">{{$t('footer.col2.corporateSocialResponsability.label')}}</a></li>
+                                <li><a href=" $t('footer.col2.alliances.url')">{{$t('footer.col2.alliances.label')}}</a></li>
+                                <li><a href=" $t('footer.col2.aeroRepublica.url')">{{$t('footer.col2.aeroRepublica.label')}}</a></li>
+                                <li><a href=" $t('footer.col2.investorRelations.url')">{{ $t('footer.col2.investorRelations.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.hubOfTheAmericas.url')">{{ $t('footer.col2.hubOfTheAmericas.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.fleet.url')">{{ $t('footer.col2.fleet.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.workWithUs.url')">{{ $t('footer.col2.workWithUs.label') }}</a></li>
+                                <li><a href=" $t('footer.col2.securePurchases.url')">{{ $t('footer.col2.securePurchases.url') }}</a></li>
+                                <li><a href=" $t('footer.col2.news.url')">{{$t('footer.col2.news.label')}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="grid__column">
+                            <ul class="footer-nav">
+                                <li><a href=" $t('footer.col3.customerCommitment.url')">{{$t('footer.col3.customerCommitment.label')}}</a></li>
+                                <li><a href=" $t('footer.col3.affidavitTravelToCuba.url')">{{$t('footer.col3.affidavitTravelToCuba.label')}}</a></li>
+                                <li><a href=" $t('footer.col3.lengthyTarmacsDelays.url')">{{$t('footer.col3.lengthyTarmacsDelays.label')}}</a></li>
+                                <li><a href=" $t('footer.col3.eDBVBrazil.url')">{{$t('footer.col3.eDBVBrazil.label')}}</a></li>
+                                <li><a href=" $t('footer.col3.digitalTaxReceiptMexico.url')">{{$t('footer.col3.digitalTaxReceiptMexico.label')}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- grid -->
+            </div>
+        </footer>        
     </div>
     <script src="/dist/build.js"></script>
   </body>
