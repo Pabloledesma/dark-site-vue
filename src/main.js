@@ -53,9 +53,9 @@ const routes = [
 const router = new VueRouter({routes})
 
 Vue.filter('formatDate', (value) => {
-  if(value){
-    return moment(String(value)).format('MM/DD/YYYY hh:mm')
-  }
+   if(value){
+      return moment(String(value)).format('MM/DD/YYYY hh:mm')
+    }
 })
 
 new Vue({
@@ -71,7 +71,6 @@ new Vue({
   	data: {
   		currentLang: 'en'
   	},
-
   	methods: {
   		changeLanguage(lang){
   			//Change the language

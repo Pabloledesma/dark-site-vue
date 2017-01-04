@@ -8,6 +8,24 @@ export default {
 				</div>
 			`,
 			date: new Date(2017, 0, 25, 15, 35)
+		},
+		{
+			title: 'Otro titulo',
+			body:`
+				<div class="body-news">
+					<p>Noticia pasada.</p>
+				</div>
+			`,
+			date: new Date(2016, 11, 12)
+		},
+		{
+			title: 'Medio',
+			body:`
+				<div class="body-news">
+					<p>Noticia pasada.</p>
+				</div>
+			`,
+			date: new Date(2016, 11, 24)
 		}
 	]
 }

@@ -2,18 +2,19 @@
 	<div>
 		<h1>{{ $t("latestNewsPage.title") }}</h1>
 		<hr>
-		<div v-for="notice in news">
-			<h3>{{ notice.title }}</h3>
+		
+			<h3>{{ lastNotice.title }}</h3>
 
-			<div v-html="notice.body"></div>
-			{{ notice.date | formatDate }}
-		</div>
+			<div v-html="lastNotice.body"></div>
+			{{ lastNotice.date | formatDate }}
+		
 	</div>
 	
 
 </template>
 
 <script>
+import _ from 'lodash'
 import news from '../news'
 
 
@@ -24,8 +25,14 @@ import news from '../news'
 				news: news.news
 			};
 		},
+		computed: {
+			lastNotice(){
+				return _.orderBy(this.news, 'date').pop()
+			}
+		},
+
 		mounted(){
-			console.log(news);
+			console.log(this.lastNotice.pop())
 		}
 	}
 </script>
