@@ -6,7 +6,7 @@ p { color: #333; }
 a { color: #666; }
 ul > li { list-style: none; }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+[v-cloak] {
   display: none !important;
 }
 
