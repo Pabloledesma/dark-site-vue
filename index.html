@@ -90,7 +90,40 @@
                     </div>
                 </div><!-- grid -->
             </div>
-        </footer>        
+        </footer>
+
+        <div class="grid__row footer">
+        <div class="grid__column termns">
+            <p v-cloak>{{$t('footer.copy.title')}}</p>
+            <a :href="$t('footer.copy.siteMap.url')" class="customerService">{{$t('footer.copy.siteMap.label')}}</a> |
+            <a href="$t('footer.copy.contractOfCarriage.url')" class="customerService">{{$t('footer.copy.contractOfCarriage.label')}}</a> |
+            <a href="$t('footer.copy.privacyPolicy.url')" class="customerService">{{$t('footer.copy.privacyPolicy.label')}}</a> | 
+            <a href="$t('footer.copy.termsAndConditions.url')" class="customerService">{{$t('footer.copy.termsAndConditions.label')}}</a> | 
+            <a href="$t('footer.copy.contactUs.url')" class="customerService">{{$t('footer.copy.contactUs.label')}}</a> 
+        </div>
+   <div class="grid__column social">
+    <a href="$t('footer.copy.webDeals.url')" target="_blank">
+      <img class="smallicon" src="src/assets/img/promo-web.png" alt="$t('footer.copy.webDeals.alt')">
+    </a>
+    <a href="https://www.facebook.com/copaairlines" target="_blank">
+      <img class="smallicon" src="src/assets/img/facebook-logo.png" alt="Facebook logo">
+    </a>
+    <a href="http://www.instagram.com/copaairlines" target="_blank">
+      <img class="smallicon" src="src/assets/img/instagram-logo.png" alt="Instagram logo">
+    </a>
+    <a href="https://www.twitter.com/copaairlines" target="_blank">
+      <img class="smallicon" src="src/assets/img/twitter-logo.png" alt="Twitter logo">
+    </a> 
+    <a href="https://plus.google.com/115021246614198861730" target="_blank" rel="publisher">
+      <img class="smallicon" src="src/assets/img/google-plus-logo.png" alt="Google Plus logo">
+    </a><br>
+    <a href="$t('footer.copy.starAlliance.url')" target="_blank">
+      <img class="smallicon" src="src/assets/img/star-alliance-logo-black.png" alt="Star Alliance logo">
+    </a>  
+   
+  </div>
+</div>
+        
     </div>
     <script src="/dist/build.js"></script>
   </body>

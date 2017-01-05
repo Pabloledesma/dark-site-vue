@@ -17,9 +17,7 @@ export default {
 			latestNewsPage: {
 				title: 'Latest News'
 			},
-
 			
-
 			footer: {
 				col1: {
 					title: 'Customer Service',
@@ -130,6 +128,38 @@ export default {
 					digitalTaxReceiptMexico: {
 						label: 'Digital receipt for tax purposes (Mexico)',
 						url: 'https://www.copaair.com/en/web/gs/digital-tax-receipt-mexico'
+					}
+				},
+
+				copy: {
+					title: 'Copyright © 2016 Copa Airlines, Incorporated. All rights reserved.',
+					siteMap: {
+						label: 'Site Map',
+						url: 'https://www.copaair.com/en/web/gs/site-map'
+					},
+					contractOfCarriage: {
+						label: 'Contract of carriage',
+						url: 'https://www.copaair.com/en/web/gs/contract-of-carriage'
+					},
+					privacyPolicy: {
+						label: 'Privacy Policy',
+						url: 'https://www.copaair.com/en/web/gs/privacy-policy'
+					},
+					termsAndConditions: {
+						label: 'Terms and conditions',
+						url: 'https://www.copaair.com/en/web/gs/terms-conditions'
+					},
+					contactUs: {
+						label: 'Contact us',
+						url: 'https://www.copaair.com/en/web/gs/contact-us'
+					}, 
+					webDeals: {
+						alt: 'webDeals',
+						url: 'https://www.copaair.com/en/web/gs/web-deals'
+					},
+					starAlliance: {
+						url: 'https://www.copaair.com/en/gs/star-alliance',
+						alt: 'Star Alliance logo'
 					}
 				}
 				
@@ -263,6 +293,37 @@ export default {
 					digitalTaxReceiptMexico: {
 						label: 'Comprobante fiscal digital de México',
 						url: 'https://www.copaair.com/es/web/gs/comprobante-fiscal-digital-mexico'
+					}
+				},
+				copy: {
+					title: 'Copyright © 2016 Copa Airlines, Incorporado. Todos los derechos reservados.',
+					siteMap: {
+						label: 'Mapa del sitio',
+						url: 'https://www.copaair.com/es/web/gs/mapa-del-sitio'
+					},
+					contractOfCarriage: {
+						label: 'Contract of carriage',
+						url: 'https://www.copaair.com/en/web/gs/contract-of-carriage'
+					},
+					privacyPolicy: {
+						label: 'Privacy Policy',
+						url: 'https://www.copaair.com/en/web/gs/privacy-policy'
+					},
+					termsAndConditions: {
+						label: 'Terms and conditions',
+						url: 'https://www.copaair.com/en/web/gs/terms-conditions'
+					},
+					contactUs: {
+						label: 'Contact us',
+						url: 'https://www.copaair.com/en/web/gs/contact-us'
+					}, 
+					webDeals: {
+						alt: 'webDeals',
+						url: 'https://www.copaair.com/en/web/gs/web-deals'
+					},
+					starAlliance: {
+						url: 'https://www.copaair.com/en/gs/star-alliance',
+						alt: 'Star Alliance logo'
 					}
 				}
 				

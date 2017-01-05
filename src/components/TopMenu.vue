@@ -38,13 +38,8 @@
 <script>
 export default {
   
-    name: 'TopMenu',
-   
-    data () {
-        return {
-          
-        };
-    }
+    name: 'TopMenu'
+
 }
 </script>
  
