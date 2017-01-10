@@ -1,5 +1,4 @@
-export default {
-	news: [
+let news = [
 		{
 			title: 'Este es el titulo de la noticia',
 			body:`
@@ -27,5 +26,6 @@ export default {
 			`,
 			date: new Date(2016, 11, 24)
 		}
-	]
-}
+];
+
+export default news;

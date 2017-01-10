@@ -457,7 +457,40 @@ export default {
 						label: 'Comprovante fiscal digital de México',
 						url: 'https://www.copaair.com/pt/web/gs/recibo-digitais-mexico'
 					}
+				},
+
+				copy: {
+					title: 'Copyright © 2016 Copa Airlines, Incorporado. Todos os direitos reservados.',
+					siteMap: {
+						label: 'Mapa do site',
+						url: 'https://www.copaair.com/pt/web/gs/mapa-do-site'
+					},
+					contractOfCarriage: {
+						label: 'Contrato de transporte',
+						url: 'https://www.copaair.com/pt/web/gs/contrato-transporte'
+					},
+					privacyPolicy: {
+						label: 'Politica de privacidade',
+						url: 'https://www.copaair.com/pt/web/gs/politica-privacidade'
+					},
+					termsAndConditions: {
+						label: 'Termos e condições',
+						url: 'https://www.copaair.com/pt/web/gs/termos-condicoes'
+					},
+					contactUs: {
+						label: 'Fale conosco',
+						url: 'https://www.copaair.com/pt/web/gs/fale-conosco'
+					}, 
+					webDeals: {
+						alt: 'webDeals',
+						url: 'https://www.copaair.com/pt/web/gs/web-deals'
+					},
+					starAlliance: {
+						url: 'https://www.copaair.com/pt/gs/star-alliance',
+						alt: 'Star Alliance logo'
+					}
 				}
+				
 				
 			}
  		}

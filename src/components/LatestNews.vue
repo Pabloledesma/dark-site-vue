@@ -22,7 +22,7 @@ import news from '../news'
 		name: 'LatestNews',
 		data(){
 			return {
-				news: news.news
+				news: news
 			};
 		},
 		computed: {

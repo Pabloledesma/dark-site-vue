@@ -87,7 +87,7 @@ new Vue({
         Vue.config.lang = lang
         // Crear los nombres de las rutas con sus respectivos parametros
         //Replace route
-        //this.replaceRoute()
+        this.replaceRoute()
         //router.replace( '/' + lang )
         //this.replaceRoute()
        //Crear el redireccionamiento a las rutas en su respectivo idioma sin el parametro de lenguage seleccionado
@@ -114,10 +114,9 @@ new Vue({
       },
     },
     created(){
-      if(this.$route.params.lang){
+      if(this.$route.params.lang !== undefined){
         console.log(this.$route.params.lang)
-      } else {
-        console.log('nothing...')
-      }
+        this.changeLanguage(this.$route.params.lang);
+      } 
     }
 })

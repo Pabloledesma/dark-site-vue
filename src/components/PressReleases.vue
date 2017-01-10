@@ -19,7 +19,7 @@ import news from '../news'
 		name: 'PressReleases',
 		data(){
 			return {
-				news: news.news
+				news: news
 			};
 		},
 		computed: {
