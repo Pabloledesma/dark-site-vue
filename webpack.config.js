@@ -4,8 +4,9 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: '[hash].build.js',
-    path: path.resolve(__dirname, './dist')
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'build.js'
   },
   module: {
     rules: [
@@ -46,12 +47,10 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map',
-  plugins: [
-      new webpack.optimize.CommonsChunkPlugin({
-          name: 'vendor' // Specify the common bundle's name.
-      })
-  ]
+  performance: {
+    hints: false
+  },
+  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
