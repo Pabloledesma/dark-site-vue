@@ -2,14 +2,10 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: {
-    main: './src/main.js',
-    vendor: ['Vue', 'vue-router', 'vue-i18n', 'moment']
-  },
+  entry: './src/main.js',
   output: {
-    filename: '[hash].[name].js',
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/'
+    filename: '[hash].build.js',
+    path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [

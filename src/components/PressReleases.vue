@@ -5,8 +5,8 @@
 
 	<div v-for="notice in noticesOrdered">
 		<h2>{{notice.title}}</h2>
-		<p>{{notice.date | formatDate}}</p>
 		<div v-html="notice.body"></div>
+		<hr>
 	</div>
 </div>
 
