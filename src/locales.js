@@ -227,7 +227,7 @@ export default {
 
 				},
 				col2: {
-					title: 'ACERCA DE COPA AIRLINES',
+					title: 'Acerca de Copa Airlines',
 					ourHistory: {
 						label: 'Nuestra historia',
 						url: 'https://www.copaair.com/es/web/gs/nuestra-historia'
@@ -275,7 +275,7 @@ export default {
 					}
 				},
 				col3: {
-					title: 'INFORMACIÓN LEGAL',
+					title: 'Información Legal',
 					customerCommitment: {
 						label: 'Compromiso con el pasajero',
 						url: 'https://www.copaair.com/es/web/gs/compromiso-pasajero'
@@ -350,7 +350,7 @@ export default {
 			},
 			footer: {
 				col1: {
-					title: 'ATENDIMENTO AO CLIENTE',
+					title: 'Atendimiento ao cliente',
 					faq: {
 						label: 'Preguntas frecuentes',
 						url: 'https://www.copaair.com/pt/web/gs/preguntas-frecuentes'
@@ -390,7 +390,7 @@ export default {
 
 				},
 				col2: {
-					title: 'SOBRE A COPA AIRLINES',
+					title: 'Sobre a Copa Airlines',
 					ourHistory: {
 						label: 'Nossa historia',
 						url: 'https://www.copaair.com/pt/web/gs/nossa-historia'
@@ -438,7 +438,7 @@ export default {
 					}
 				},
 				col3: {
-					title: 'INFORMAÇÃO LEGAL',
+					title: 'Informação legal',
 					customerCommitment: {
 						label: 'Compromisso com o cliente',
 						url: 'https://www.copaair.com/pt/web/gs/compromisso-cliente'
