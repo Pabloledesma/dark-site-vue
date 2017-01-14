@@ -1,7 +1,7 @@
 <template>
-    <div v-show="visible">
+    <li v-show="visible">
         <slot></slot>
-    </div>
+    </li>
 </template>
 <script>
 export default {

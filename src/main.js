@@ -7,7 +7,12 @@ import LatestNews from './components/LatestNews.vue'
 import PressReleases from './components/PressReleases.vue'
 import Assistance from './components/Assistance.vue'
 import About from './components/About.vue'
+import Tabs from './components/Tabs.vue'
+import Tab from './components/Tab.vue'
+
 import locales from './locales'
+import _ from 'lodash'
+import news from './news'
 
 // install plugin
 Vue.use(VueRouter)
@@ -22,6 +27,8 @@ Object.keys(locales).forEach(function (lang) {
 })
 
 window.Vue = Vue;
+window._ = _;
+window.news = news;
 
 const router = new VueRouter({
   
@@ -70,7 +77,9 @@ new Vue({
   	el: '#app',
 
   	components: {
-  		TopMenu
+  		TopMenu,
+  		Tabs,
+  		Tab
   	},
 
   	data: {
@@ -81,6 +90,7 @@ new Vue({
   			//Change the language
         this.currentLang = lang
         Vue.config.lang = lang
+        window.lang = lang
         // Crear los nombres de las rutas con sus respectivos parametros
         //Replace route
         this.replaceRoute()
