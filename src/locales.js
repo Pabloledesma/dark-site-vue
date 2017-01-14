@@ -16,78 +16,127 @@ export default {
 			latestNewsPage: {
 				title: 'Latest News'
 			},
-			history: {
-				title: 'Our History',
-				text: 'Copa Airlines was founded in 1947 as the national airline of Panama. It began operations with domestic flights to three cities in Panama on Douglas DC-3/C47 planes. By 1966, the airline boasted three weekly flights to San Jose, Costa Rica, which was its first international destination. In 1969, the first AVRO 748 was introduced for flights to Kingston in Jamaica, Managua in Nicaragua and Barranquilla in Colombia. In the 1970s, Medellin, Cartagena, San Salvador and Guatemala became part of the expanding network of destination cities.',
-				years: [
-					{
+			about: {
+				history: {
+					title: 'Our History',
+					text: 'Copa Airlines was founded in 1947 as the national airline of Panama. It began operations with domestic flights to three cities in Panama on Douglas DC-3/C47 planes. By 1966, the airline boasted three weekly flights to San Jose, Costa Rica, which was its first international destination. In 1969, the first AVRO 748 was introduced for flights to Kingston in Jamaica, Managua in Nicaragua and Barranquilla in Colombia. In the 1970s, Medellin, Cartagena, San Salvador and Guatemala became part of the expanding network of destination cities.',
+					n1980: {
 						title: '1980',
-						img: 'img/1980.jpg',
 						text: 'In 1980, the airline withdrew from the domestic market to focus on its international reach. This year a Boeing 737-100 was added to the fleet. During this decade  , the airline expanded its network of destinations to include Port-au-Prince, Haiti, Santo Domingo in the Dominican Republic, San Juan in Puerto Rico and Miami in the U.S.'
 					},
-					{
+					n1992:{
 						title: '1992',
-						img: 'img/1992.jpg',
 						text: 'In 1992, it began operating from the first Panamanian headquarters for flights connecting within Latin America, creating the Hub of the Americas in the Tocumen International Airport. Flights were added to Caracas in Venezuela, Mexico City, Santiago in Chile, Cali and Bogota in Colombia, Quito and Guayaquil in Ecuador, Lima in Peru, Buenos Aires in Argentina and Havana in Cuba.'
 					},
-					{
+					n1998:{
 						title: '1998',
-						img: 'img/1998.jpg',
 						text: 'In 1998, a strategic alliance was formed with Continental Airlines and in 1999, the airline launched its new brand as Copa Airlines and adopted the OnePass® frequent flyer program. At the same time, it began to upgrade its fleet with Boeing 737 Next Generation planes.' 
 					},
-					{
+					n2000:{
 						title: '2000',
-						img: 'img/2000.jpg',
 						text: 'The strategy  from  2000 onward was to focus on expansion within the region. For the year 2005, the airline incorporated flights to Cancun in Mexico, Sao Paulo in Brazil, San Andres in Colombia, Tegucigalpa in Honduras, and Orlando, Los Angeles and New York in the United States.'
 					},
-					{
+					n2005: {
 						title: '2005',
-						img: 'img/2005.jpg',
 						text: 'In 2005, Copa Airlines, a subsidiary of Copa Holdings S.A., began trading on the New York Stock Exchange, becoming the third Latin American airline to be listed on this important exchange.'
 					},
-					{
+					n2006:{
 						title: '2006',
-						img: 'img/2006.jpg',
 						text: 'In 2006, it added the destinations: Cordoba in Argentina, Guadalajara in Mexico, Washington, D.C., in the United States, and Punta Cana in the Dominican Republic. It simultaneously increased the frequency of its flights to seven destinations'
 					},
-					{
+					n2008:{
 						title: '2008',
-						img: 'img/2008.jpg',
 						text: 'In 2008, it began operating flights to Port of Spain in Trinidad and Tobago, and Belo Horizonte in Brazil, while announcing new destinations such as Santa Cruz in Bolivia, Valencia in Venezuela and Aruba. Copa Airlines continues adding destinations and upgrading its modern fleet with Boeing 737-700 and 737-800 planes, and Embraer 190 planes.'
 					},
-					{
+					n2009:{
 						title: '2009',
-						img: 'img/2009.jpg',
 						text: 'Announces order for 15 airplanes to be delivered between 2010 and 2015 as well as eight purchase options to be delivered between 2015 and 2017. The new aircraft will be fitted with the distinctive Boeing Sky Interior design.'
 					},
-					{
+					n2010:{
 						title: '2010',
-						img: 'img/2010.jpg',
 						text: 'Copa Airlines starts flying to the island of St. Maarten and announces that Aero República will operate under the Copa Airlines Colombia brand name. In addition, Copa Airlines communicates that it is in the process of joining the Star Alliance. Copa Airlines and Boeing announce the acquisition of 32 Next Generation 737-800 aircraft, including 10 purchase options, for a total of approximately US $2.6 billion dollars; the largest request for new aircraft in the history of Copa Airlines.'
 					},
-					{
+					n2011:{
 						title: '2011',
-						img: 'img/2011.jpg',
 						text: 'Expands its Hub of the Americas in Panama from 4 to 6 flight banks and grows its network with 7 new destinations, solidifying the Hub of the Americas’ leadership position in the region. Copa Holdings, S.A. (NYSE-Listed CPA) celebrates five years of trading.'
 					},
-					{
+					n2012:{
 						title: '2012',
-						img: 'img/2012.jpg',
 						text: 'Announces the new MileagePlus Frequent Flyer Program along with United Airlines and in June, formally joining the airlines global network, Star Alliance. Starts its flight operations to Las Vegas, Recife, Curazao, Guanacaste, and Iquitos.'
 					},
-					{
+					n2013:{
 						title: '2013',
-						img: 'img/2013.jpg',
 						text: 'Begins service to Boston and Tampa; receives the SkyTrax awards for the Best Airline in Central America and the Caribbean and the Airline with the Best Cabin Crew and Airport Staff in Central America and the Caribbean; and ends the year with a fleet of 90 airplanes.'
 					},
-					{
+					n2014:{
 						title: '2014',
-						img: 'img/2014.jpg',
 						text: 'Begins serving 5 new cities: Georgetown, Guyana; Fort Lauderdale, United States; Montreal, Canada; Santa Clara, Cuba; and Campinas, Brazil; and ends the year with 98 airplanes. Also recognized as “Mexico & Central America’s Leading Airline” by World Travel Awards.'
 					}
+				},
+				singleFleet:{
+					title: 'Boeing 737-700',
+					caCount: 'Copa Airlines has 14 aircrafts.',
+					cacCount: 'Copa Airlines Colombia has 4 aircrafts.',
+					img: 'src/assets/img/boeing700.jpg',
+					business: '12 seats in Business Class',
+					general: '112 seats in Main Cabin',
+					details: { label: 'Technical details', url: 'https://www.copaair.com/en/web/gs/previous-fleet' },
+					music: { label: 'Entertainment on board', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' }
+				},
+				fleet: {
+					title: 'Fleet',
+					fleets: [
+						{
+							id: 2,
+							title: 'Boeing 737-800',
+							img: 'src/assets/img/boeing800.jpg',
+							model: [
+								{
+									title: 'Model 737-800A',
+									caCount: 'Copa Airlines has 25 aircrafts.',
+									business: '16 seats in Business Class',
+									general: '144 seats in Main Cabin',
+									details: { label: 'Technical details', url: 'https://www.copaair.com/en/web/gs/previous-fleet' },
+									music: { label: 'Entertainment on board', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' }
+								},
+								{
+									title: 'Model 737-800B *',
+									caCount: 'Copa Airlines has 29 aircrafts.',
+									business: '16 seats in Business Class',
+									general: '138 seats in Main Cabin',
+									details: { label: 'Technical details', url: 'https://www.copaair.com/en/web/gs/previous-fleet' },
+									music: { label: 'Entertainment on board', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' }
+								}
+							]
+						},
+						{
+							id: 3,
+							title: 'Embraer 190AR',
+							img: 'src/assets/img/embraerAR.jpg',
+							model: [
+								{
+									title: 'Model Embraer 190AR A',
+									caCount: 'Copa Airlines has 12 aircrafts.',
+									cacCount: 'Copa Airlines Colombia has 3 aircrafts.',
+									business: '10 seats in business class',
+									general: '84 seats in Main cabin',
+									details: { label: 'Technical details', url: 'https://www.copaair.com/en/web/gs/previous-fleet' },
+									music: { label: 'In-Flight information', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' }
+								},
+								{
+									title: 'Model Embraer 190AR B',
+									caCount: 'Copa Airlines has 11 aircrafts.',
+									general: '106 seats in Main cabin',
+									details: { label: 'Technical details', url: 'https://www.copaair.com/en/web/gs/previous-fleet' },
+									music: { label: 'In-Flight information', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' }
+								}
 
-				] 
+							]
+						}
+					]
+				}
 			},
+
 			footer: {
 				col1: {
 					title: 'Customer Service',
@@ -253,77 +302,64 @@ export default {
 			latestNewsPage: {
 				title: 'Últimas Noticias'
 			},
-			history: {
-				title: 'Nuestra Historia',
-				text: 'Copa Airlines fue fundada en 1947 como la Compañía Panameña de aviación. Inició vuelos a tres ciudades de Panamá utilizando aviones Douglas DC-3/C47. En 1966 ya tenía tres frecuencias semanales a San José, Costa Rica que fue el primer destino internacional. En 1969 incorporó un avión AVRO 748 para volar a la ciudad de Kingston en Jamaica, Managua en Nicaragua y Barranquilla en Colombia. En la década de 1970 incorpora las ciudades de Medellín, Cartagena, San Salvador y Guatemala a su creciente red de rutas. ',
-				years: [
-					{
+			about: {
+				history: {
+					title: 'Nuestra Historia',
+					text: 'Copa Airlines fue fundada en 1947 como la Compañía Panameña de aviación. Inició vuelos a tres ciudades de Panamá utilizando aviones Douglas DC-3/C47. En 1966 ya tenía tres frecuencias semanales a San José, Costa Rica que fue el primer destino internacional. En 1969 incorporó un avión AVRO 748 para volar a la ciudad de Kingston en Jamaica, Managua en Nicaragua y Barranquilla en Colombia. En la década de 1970 incorpora las ciudades de Medellín, Cartagena, San Salvador y Guatemala a su creciente red de rutas. ',
+					n1980: {
 						title: '1980',
-						img: 'img/1980.jpg',
 						text: 'Se retira del mercado doméstico para enfocarse en su alcance internacional. Ese año incorpora un avión Boeing 737-100. Durante esa década  la aerolínea amplía sus destinos a las ciudades de Puerto Príncipe en Haití, Santo Domingo en República Dominicana, San Juan en Puerto Rico y Miami en Estados Unidos.'
 					},
-					{
-						title: '1992',
-						img: 'img/1992.jpg',
-						text: 'Inicia operaciones el primer centro de conexiones de vuelos dentro de Latinoamérica con sede en Panamá creando el “Hub de las Américas” en el Aeropuerto Internacional de Tocumen. Se añaden los destinos de Caracas en Venezuela, Ciudad de México, Santiago de Chile, Cali y Bogotá en Colombia, Quito y Guayaquil en Ecuador, Lima en Perú, Buenos Aires en Argentina y La Habana en Cuba.'
+					n1992:{
+							title: '1992',
+							text: 'Inicia operaciones el primer centro de conexiones de vuelos dentro de Latinoamérica con sede en Panamá creando el “Hub de las Américas” en el Aeropuerto Internacional de Tocumen. Se añaden los destinos de Caracas en Venezuela, Ciudad de México, Santiago de Chile, Cali y Bogotá en Colombia, Quito y Guayaquil en Ecuador, Lima en Perú, Buenos Aires en Argentina y La Habana en Cuba.'
+						},
+					n1998: {
+							title: '1998',
+							text: 'Se crea una alianza estratégica con Continental Airlines y en 1999 lanza su nueva imagen como Copa Airlines y adopta el programa de viajero frecuente OnePass®. Al mismo tiempo inicia la renovación de su flota con aviones Boeing 737 Next Generation.'
+						},
+					n2000:{
+							title: '2000',
+							text: 'La estrategia se enfoca en expandirse en la región. Para el 2005 ha incorporado los destinos de Cancún en México, Sao Paulo en Brasil, San Andrés en Colombia, Tegucigalpa en Honduras y Orlando, Los Ángeles y Nueva York en Estados Unidos.'
+						},
+					n2005:{
+							title: '2005',
+							text: 'A través de Copa Holdings, S. A. la aerolínea entra a cotizarse en la Bolsa de Valores de Nueva York convirtiéndose en la tercera línea aérea latinoamericana en cotizar en este importante mercado.'
+						},
+					n2006:	{
+							title: '2006',
+							text: 'Añade los destinos de Córdoba en Argentina, Guadalajara en México y Washington D.C. en Estados Unidos y Punta Cana en República Dominicana y aumenta frecuencias de vuelo a siete de sus destinos. '
+						},
+					n2008:{
+							title: '2008',
+							text: 'Inicia operaciones a Puerto España y Belo Horizonte y anuncia destinos nuevos como Santa Cruz en Bolivia, Valencia en Venezuela y Aruba. Copa Airlines sigue añadiendo destinos y continúa renovando su moderna flota con aviones Boeing 737-700 y 737-800 y Embraer 190.'
 					},
-					{
-						title: '1998',
-						img: 'img/1998.jpg',
-						text: 'Se crea una alianza estratégica con Continental Airlines y en 1999 lanza su nueva imagen como Copa Airlines y adopta el programa de viajero frecuente OnePass®. Al mismo tiempo inicia la renovación de su flota con aviones Boeing 737 Next Generation.'
+					n2009:{
+							title: '2009',
+							text: 'Anuncia pedido para 15 aeronaves con entrega entre 2010 y 2015 y ocho opciones para entrega entre el 2015 y 2017. Las nuevas aeronaves estarán equipadas con el diseño distintivo de Boeing Sky Interior.'
 					},
-					{
-						title: '2000',
-						img: 'img/2000.jpg',
-						text: 'La estrategia se enfoca en expandirse en la región. Para el 2005 ha incorporado los destinos de Cancún en México, Sao Paulo en Brasil, San Andrés en Colombia, Tegucigalpa en Honduras y Orlando, Los Ángeles y Nueva York en Estados Unidos.'
+					n2010:{
+							title: '2010',
+							text: 'Inicia operaciones a la isla de St. Maarten y anuncia que Aero República operará bajo la marca Copa Airlines Colombia. Se comunica el proceso de integración a Star Alliance. Copa Airlines y Boeing anuncian la adquisición de 32 aeronaves Next Generation 737-800, incluyendo 10 opciones de compra, un valor aproximado de US$2,600 millones de dólares, el mayor pedido de nuevas aeronaves en la historia de Copa Airlines.'
 					},
-					{
-						title: '2005',
-						img: 'img/2005.jpg',
-						text: 'A través de Copa Holdings, S. A. la aerolínea entra a cotizarse en la Bolsa de Valores de Nueva York convirtiéndose en la tercera línea aérea latinoamericana en cotizar en este importante mercado.'
+					n2011:{
+							title: '2011',
+							text: 'Expande su Hub de las Américas en Panamá de 4 a 6 bancos de vuelo y crece su red de rutas con 7 nuevos destinos, solidificando así el liderazgo del Hub de las Américas en la región. Copa Holdings, S.A. (CPA listado en NYSE) celebra cinco años de estar cotizando.'
 					},
-					{
-						title: '2006',
-						img: 'img/2006.jpg',
-						text: 'Añade los destinos de Córdoba en Argentina, Guadalajara en México y Washington D.C. en Estados Unidos y Punta Cana en República Dominicana y aumenta frecuencias de vuelo a siete de sus destinos. '
+					n2012:{
+							title: '2012',
+							text: 'Anuncia el nuevo programa de viajero frecuente MileagePlus en conjunto con United y en junio la entrada formal a la red global de aerolíneas Star Alliance. Inicia operaciones a Las Vegas, Recife, Curazao, Guanacaste e Iquitos.'
 					},
-					{
-						title: '2008',
-						img: 'img/2008.jpg',
-						text: 'Inicia operaciones a Puerto España y Belo Horizonte y anuncia destinos nuevos como Santa Cruz en Bolivia, Valencia en Venezuela y Aruba. Copa Airlines sigue añadiendo destinos y continúa renovando su moderna flota con aviones Boeing 737-700 y 737-800 y Embraer 190.'
+					n2013:{
+							title: '2013',
+							text: 'Inicia operaciones a Boston y Tampa; recibe los premios Mejor Aerolínea de Centroamérica y El Caribe y La Aerolínea con el Mejor Personal de Cabina y de Aeropuertos de Centroamérica y el Caribe otorgados por SkyTrax; y culmina el año con una flota de 90 aviones.'
 					},
-					{
-						title: '2009',
-						img: 'img/2009.jpg',
-						text: 'Anuncia pedido para 15 aeronaves con entrega entre 2010 y 2015 y ocho opciones para entrega entre el 2015 y 2017. Las nuevas aeronaves estarán equipadas con el diseño distintivo de Boeing Sky Interior.'
-					},
-					{
-						title: '2010',
-						img: 'img/2010.jpg',
-						text: 'Inicia operaciones a la isla de St. Maarten y anuncia que Aero República operará bajo la marca Copa Airlines Colombia. Se comunica el proceso de integración a Star Alliance. Copa Airlines y Boeing anuncian la adquisición de 32 aeronaves Next Generation 737-800, incluyendo 10 opciones de compra, un valor aproximado de US$2,600 millones de dólares, el mayor pedido de nuevas aeronaves en la historia de Copa Airlines.'
-					},
-					{
-						title: '2011',
-						img: 'img/2011.jpg',
-						text: 'Expande su Hub de las Américas en Panamá de 4 a 6 bancos de vuelo y crece su red de rutas con 7 nuevos destinos, solidificando así el liderazgo del Hub de las Américas en la región. Copa Holdings, S.A. (CPA listado en NYSE) celebra cinco años de estar cotizando.'
-					},
-					{
-						title: '2012',
-						img: 'img/2012.jpg',
-						text: 'Anuncia el nuevo programa de viajero frecuente MileagePlus en conjunto con United y en junio la entrada formal a la red global de aerolíneas Star Alliance. Inicia operaciones a Las Vegas, Recife, Curazao, Guanacaste e Iquitos.'
-					},
-					{
-						title: '2013',
-						img: 'img/2013.jpg',
-						text: 'Inicia operaciones a Boston y Tampa; recibe los premios Mejor Aerolínea de Centroamérica y El Caribe y La Aerolínea con el Mejor Personal de Cabina y de Aeropuertos de Centroamérica y el Caribe otorgados por SkyTrax; y culmina el año con una flota de 90 aviones.'
-					},
-					{
-						title: '2014',
-						img: 'img/2014.jpg',
-						text: 'Inicia operaciones a 5 nuevas ciudades: Georgetown, Guyana; Fort Lauderdale, Estados Unidos; Montreal, Canadá; Santa Clara, Cuba y Campinas; Brasil y finaliza el año con 98 aeronaves. También es galardonada como “Aerolínea Líder de México y Centroamérica” por el World Travel Awards.'
+					n2014:{
+							title: '2014',
+							text: 'Inicia operaciones a 5 nuevas ciudades: Georgetown, Guyana; Fort Lauderdale, Estados Unidos; Montreal, Canadá; Santa Clara, Cuba y Campinas; Brasil y finaliza el año con 98 aeronaves. También es galardonada como “Aerolínea Líder de México y Centroamérica” por el World Travel Awards.'
 					}
-
-				] 
+				},
+				
 			},
 			footer: {
 				col1: {
@@ -488,76 +524,64 @@ export default {
 			latestNewsPage: {
 				title: 'Últimas Notícias'
 			},
-			history: {
-				title: 'História',
-				text: 'A Copa Airlines foi fundada em 1947 como a Companhia Panamenha de aviação. Começou com voos para três cidades do Panamá utilizando aviões Douglas DC-3/C47. Em 1966 já possuía três freqüências semanais para San José, Costa Rica seu primeiro destino internacional. Em 1969 incorporou um avião AVRO 748 para voar até Kingston, na Jamaica, Manágua, na Nicarágua, e Barranquilla, na Colômbia. Na década de 70 incorporou a seus destinos as cidades de Medelín, Cartagena, San Salvador e Guatemala. ',
-				years: [
-					{
-						title: '1980',
-						img: 'img/1980.jpg',
-						text: 'Se retira del mercado doméstico para enfocarse en su alcance internacional. Ese año incorpora un avión Boeing 737-100. Durante esa década  la aerolínea amplía sus destinos a las ciudades de Puerto Príncipe en Haití, Santo Domingo en República Dominicana, San Juan en Puerto Rico y Miami en Estados Unidos.'
+			about: {
+				history: {
+					title: 'História',
+					text: 'A Copa Airlines foi fundada em 1947 como a Companhia Panamenha de aviação. Começou com voos para três cidades do Panamá utilizando aviões Douglas DC-3/C47. Em 1966 já possuía três freqüências semanais para San José, Costa Rica seu primeiro destino internacional. Em 1969 incorporou um avião AVRO 748 para voar até Kingston, na Jamaica, Manágua, na Nicarágua, e Barranquilla, na Colômbia. Na década de 70 incorporou a seus destinos as cidades de Medelín, Cartagena, San Salvador e Guatemala. ',
+					n1980:	{
+							title: '1980',
+							text: 'Se retira del mercado doméstico para enfocarse en su alcance internacional. Ese año incorpora un avión Boeing 737-100. Durante esa década  la aerolínea amplía sus destinos a las ciudades de Puerto Príncipe en Haití, Santo Domingo en República Dominicana, San Juan en Puerto Rico y Miami en Estados Unidos.'
 					},
-					{
-						title: '1992',
-						img: 'img/1992.jpg',
-						text: 'Em 1992, iniciou as operações do primeiro centro de conexões de voos dentro da América Latina, com sede no Panamá, criando desta forma o “Hub das Américas” no Aeroporto Internacional de Tocumen. Foram incorporados novos destinos: Caracas, Venezuela, Cidade do México, Santiago do Chile, Cali e Bogotá, Colômbia, Quito e Guayaquil, Equador, Lima, Peru, Buenos Aires, Argentina, e Havana, Cuba.'
+					n1992:{
+							title: '1992',
+							text: 'Em 1992, iniciou as operações do primeiro centro de conexões de voos dentro da América Latina, com sede no Panamá, criando desta forma o “Hub das Américas” no Aeroporto Internacional de Tocumen. Foram incorporados novos destinos: Caracas, Venezuela, Cidade do México, Santiago do Chile, Cali e Bogotá, Colômbia, Quito e Guayaquil, Equador, Lima, Peru, Buenos Aires, Argentina, e Havana, Cuba.'
 					},
-					{
-						title: '1998',
-						img: 'img/1998.jpg',
-						text: 'Em 1998 foi firmada uma aliança estratégica com a Continental Airlines e em 1999 foi lançada sua nova imagem como Copa Airlines e adotado o Programa de passageiro freqüente OnePass®. Ao mesmo tempo teve início a renovação de sua frota com aviões Boeing 737 Next Generation.'
+					n1998:{
+							title: '1998',
+							text: 'Em 1998 foi firmada uma aliança estratégica com a Continental Airlines e em 1999 foi lançada sua nova imagem como Copa Airlines e adotado o Programa de passageiro freqüente OnePass®. Ao mesmo tempo teve início a renovação de sua frota com aviões Boeing 737 Next Generation.'
 					},
-					{
-						title: '2000',
-						img: 'img/2000.jpg',
-						text: 'A partir de 2000 a estratégia passou a ser a expansão na região. Em 2005 incorporou como destinos Cancun no México, São Paulo, Brasil, San Andrés na Colômbia, Tegucigalpa em Honduras e Orlando, Los Angeles e Nova York nos Estados Unidos.'
+					n2000:{
+							title: '2000',
+							text: 'A partir de 2000 a estratégia passou a ser a expansão na região. Em 2005 incorporou como destinos Cancun no México, São Paulo, Brasil, San Andrés na Colômbia, Tegucigalpa em Honduras e Orlando, Los Angeles e Nova York nos Estados Unidos.'
 					},
-					{
-						title: '2005',
-						img: 'img/2005.jpg',
-						text: 'Em 2005 também, por meio da Copa Holdings, S. A. a companhia aérea passou a ser negociada na Bolsa de Valores de Nova York, tornando-se a terceira companhia aérea latino-americana negociada neste importante mercado.'
+					n2005:{
+							title: '2005',
+							text: 'Em 2005 também, por meio da Copa Holdings, S. A. a companhia aérea passou a ser negociada na Bolsa de Valores de Nova York, tornando-se a terceira companhia aérea latino-americana negociada neste importante mercado.'
 					},
-					{
-						title: '2006',
-						img: 'img/2006.jpg',
-						text: 'Em 2006, acrescentou novos destinos: Córdoba na Argentina, Guadalajara no México, Washington D.C. nos Estados Unidos e Punta Cana na República Dominicana, aumentando a freqüência de voos para sete de seus destinos.'
+					n2006:	{
+							title: '2006',
+							text: 'Em 2006, acrescentou novos destinos: Córdoba na Argentina, Guadalajara no México, Washington D.C. nos Estados Unidos e Punta Cana na República Dominicana, aumentando a freqüência de voos para sete de seus destinos.'
+						},
+					n2008:	{
+							title: '2008',
+							text: 'Em 2008 iniciou operações para Porto Espanha em Trinidad e Tobago e Belo Horizonte no Brasil e anunciou novos destinos como Santa Cruz na Bolívia, Valência na Venezuela e Aruba. A Copa Airlines continua aumentando o número de destinos e renovando sua moderna frota com aviões Boeing 737-700 e 737-800 e Embraer 190.'
+						},
+					n2009:	{
+							title: '2009',
+							text: 'Anuncia pedido de 15 aeronaves com entrega entre 2010 e 2015 e oito opções para entrega entre 2015 e 2017. As novas aeronaves estarão equipadas com o desenho distintivo da Boeing Sky Interior.'
 					},
-					{
-						title: '2008',
-						img: 'img/2008.jpg',
-						text: 'Em 2008 iniciou operações para Porto Espanha em Trinidad e Tobago e Belo Horizonte no Brasil e anunciou novos destinos como Santa Cruz na Bolívia, Valência na Venezuela e Aruba. A Copa Airlines continua aumentando o número de destinos e renovando sua moderna frota com aviões Boeing 737-700 e 737-800 e Embraer 190.'
-					},
-					{
-						title: '2009',
-						img: 'img/2009.jpg',
-						text: 'Anuncia pedido de 15 aeronaves com entrega entre 2010 e 2015 e oito opções para entrega entre 2015 e 2017. As novas aeronaves estarão equipadas com o desenho distintivo da Boeing Sky Interior.'
-					},
-					{
-						title: '2010',
-						img: 'img/2010.jpg',
-						text: 'A Copa Airlines inicia as operações na ilha de São Martinho e anuncia que a Aero República funcionará sob a marca Copa Airlines Colômbia. Também é comunicado o processo de integração com a Star Alliance. Copa Airlines e Boeing anunciam a aquisição de 32 novas aeronaves Next Generation 737-800, incluindo 10 opções de compra, um valor aproximado de US$ 2,6 bilhões, o maior pedido de novas aeronaves na história da Copa Airlines.'
-					},
-					{
-						title: '2011',
-						img: 'img/2011.jpg',
-						text: 'Expande seu Hub das Américas no Panamá de 4 bancos de voo para 6 e aumenta sua rede com mais 7 destinos, consolidando a posição de liderança do Hub das Américas na região. Copa Holdings, S.A. (listada como CPA na NYSE) celebra cinco anos de negócios. '
-					},
-					{
-						title: '2012',
-						img: 'img/2012.jpg',
-						text: 'Anuncia o novo programa de viajante frequente MileagePlus em conjunto com a United e, em junto, a entrada formal à rede mundial de companhias aéreas Star Alliance. Inicia operações a Las Vegas, Recife, Curazao, Guanacaste e Iquitos.'
-					},
-					{
-						title: '2013',
-						img: 'img/2013.jpg',
-						text: 'Inicia operações a Boston e Tampa; recebe os prêmios Melhor Linha Aérea da América Central e Caribe e A Linha Aérea com a Melhor Equipe de Bordo e de Aeroportos da América Central e Caribe outorgados pela SkyTrax; e culmina o ano com uma frota de 90 aviões.'
-					},
-					{
-						title: '2014',
-						img: 'img/2014.jpg',
-						text: 'Begins serving 5 new cities: Georgetown, Guyana; Fort Lauderdale, United States; Montreal, Canada; Santa Clara, Cuba; and Campinas, Brazil; and ends the year with 98 airplanes. Also recognized as “Mexico & Central America’s Leading Airline” by World Travel Awards.'
+					n2010:	{
+							title: '2010',
+							text: 'A Copa Airlines inicia as operações na ilha de São Martinho e anuncia que a Aero República funcionará sob a marca Copa Airlines Colômbia. Também é comunicado o processo de integração com a Star Alliance. Copa Airlines e Boeing anunciam a aquisição de 32 novas aeronaves Next Generation 737-800, incluindo 10 opções de compra, um valor aproximado de US$ 2,6 bilhões, o maior pedido de novas aeronaves na história da Copa Airlines.'
+						},
+					n2011:	{
+							title: '2011',
+							text: 'Expande seu Hub das Américas no Panamá de 4 bancos de voo para 6 e aumenta sua rede com mais 7 destinos, consolidando a posição de liderança do Hub das Américas na região. Copa Holdings, S.A. (listada como CPA na NYSE) celebra cinco anos de negócios. '
+						},
+					n2012:	{
+							title: '2012',
+							text: 'Anuncia o novo programa de viajante frequente MileagePlus em conjunto com a United e, em junto, a entrada formal à rede mundial de companhias aéreas Star Alliance. Inicia operações a Las Vegas, Recife, Curazao, Guanacaste e Iquitos.'
+						},
+					n2013:	{
+							title: '2013',
+							text: 'Inicia operações a Boston e Tampa; recebe os prêmios Melhor Linha Aérea da América Central e Caribe e A Linha Aérea com a Melhor Equipe de Bordo e de Aeroportos da América Central e Caribe outorgados pela SkyTrax; e culmina o ano com uma frota de 90 aviões.'
+						},
+					n2014:{
+							title: '2014',
+							text: 'Begins serving 5 new cities: Georgetown, Guyana; Fort Lauderdale, United States; Montreal, Canada; Santa Clara, Cuba; and Campinas, Brazil; and ends the year with 98 airplanes. Also recognized as “Mexico & Central America’s Leading Airline” by World Travel Awards.'
 					}
-				]
+				},
+
 			},
 			footer: {
 				col1: {

@@ -20,6 +20,7 @@ Vue.use(VueI18n)
 
 // set lang
 Vue.config.lang = 'en'
+Vue.config.fallbackLang = 'es'
 
 // set locales
 Object.keys(locales).forEach(function (lang) {

@@ -1,32 +1,31 @@
 <template>
-    <ul class="tabs nav-tabs">
-        <li :class="{ active: (activeTab === tab) }" v-for="tab in tabs" @click="activate(tab)">{{ tab }}</li>
-        <slot></slot>
+<div>
+    <ul class="nav nav-tabs">
+        <li :class="{ active: tab.isActive }" v-for="tab in tabs" @click="selectTab(tab)">
+        	<a>{{ $t( tab.label ) }}</a>
+        </li>
     </ul>
+    <slot></slot>
+</div>
 </template>
 <script>
 	export default {
 		name: 'tabs',
-		data() {
-		    return {
-		      activeTab: '',
-		      tabs: []
-		    }
-  		},
-
-		methods: {
-			activate(tab) {
-			  	this.activeTab = tab;
-			  	this.$emit('activateTab', tab);
-			}
+		data(){
+			return {
+				tabs: []
+			};
 		},
+		created(){
+			this.tabs = this.$children;
+		},
+		methods:{
+			selectTab( selectedTab ){
+				this.tabs.forEach(tab => {
+					tab.isActive = ( tab.label == selectedTab.label );
+				});
+			}
+		}
 
-		/**
-		* The first tab is active by default 
-		*/
-		// mounted(){
-		// 	this.activeTab = this.tabs[0];
-		// 	this.$emit('activateTab', this.tabs[0]);
-		// }
 	}
 </script>
