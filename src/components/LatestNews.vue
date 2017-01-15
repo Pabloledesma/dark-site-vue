@@ -1,22 +1,13 @@
 <template>
 	<div>
-		<h1>{{ $t("latestNewsPage.title") }}</h1>
-		<hr>
-		
-			<h2>{{ lastNotice.title }}</h2>
-			<p>{{ lastNotice.date }}</p>
-
-			<div v-html="lastNotice.body"></div>
-		
+		<h2>{{ lastNotice.title }}</h2>
+		<div v-html="lastNotice.body"></div>
 	</div>
-	
-
 </template>
 
 <script>
 import _ from 'lodash'
 import news from '../news'
-
 
 	export default {
 		name: 'LatestNews',
@@ -25,9 +16,13 @@ import news from '../news'
 				news: news
 			};
 		},
+
+		/**
+		* Return the last notice
+		*/
 		computed: {
 			lastNotice(){
-				return _.orderBy(this.news, 'date').pop()
+				return _.orderBy(this.news[window.lang], 'date').pop()
 			}
 		}
 	}

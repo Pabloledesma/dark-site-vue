@@ -153,204 +153,143 @@
 	                  </div>
 	                </article><!-- end ngRepeat: year in contentCtr.history.nyears -->
             	</tab>
-            	<tab label="Historial de seguridad">
-	                <h2>Historial de Seguridad</h2>
-	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            	<tab label="about.security.title">
+	                <h2>{{$t('about.security.title')}}</h2>
+	                <p>{{$t('about.security.text')}}</p>
             	</tab>
-            	<tab label="Flota">
+            	<tab label="about.fleet.title">
 	                <article>
 	                    <div class="Media">
 	                        <div class="Media__figure">
-	                            <h3 class="text-center"><strong class="ng-binding">Boeing 737-700</strong></h3>
-	                            <img ng-src="src/assets/img/boeing700.jpg" class="fleet-img" src="src/assets/img/boeing700.jpg">
+	                            <h3 class="text-center"><strong>{{ $t('about.singleFleet.title') }}</strong></h3>
+	                            <img class="fleet-img" src="src/assets/img/boeing700.jpg">
 	                        </div>
 	                        <div class="Media__body">
-	                            <p class="ng-binding">Copa Airlines Colombia cuenta con 4 aeronaves.</p>
-	                            <p class="ng-binding"><img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 12 asientos en Clase Ejecutiva</p>
-	                            <p class="ng-binding"><img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon"> 112 asientos en Cabina Principal</p>
-	                            <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-boeing-737-700.aspx" class="ng-binding">
+	                            <p>{{ $t('about.singleFleet.caCount') }}</p>
+	                            <p><img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon">{{ $t('about.singleFleet.business') }}</p>
+	                            <p><img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon">{{ $t('about.singleFleet.general') }}</p>
+	                            <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-boeing-737-700.aspx">
 	                            <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon"> 
-	                            Detalles técnicos
+	                           {{ $t('about.singleFleet.details.label') }}
 	                            </a><br>
-	                            <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx" class="ng-binding">
+	                            <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx">
 	                                <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon"> 
-	                                Entretenimiento a bordo
+	                                {{ $t('about.singleFleet.music.label') }}
 	                            </a>
 	                        </div>
 	                    </div>
 	                </article>
 
-	                <!-- ngRepeat: fleet in contentCtr.fleet.fleets -->
-	                <article ng-repeat="fleet in contentCtr.fleet.fleets">
+	                <article>
 	                    <div class="Media">
 	                        <div class="Media__figure">
-	                            <h3 class="text-center"><strong class="ng-binding">Boeing 737-800</strong></h3>
-	                            <img ng-src="src/assets/img/boeing800.jpg" class="fleet2model" src="src/assets/img/boeing800.jpg">
+	                            <h3 class="text-center"><strong>{{ $t('about.fleet.fleets[0].title') }}</strong></h3>
+	                            <img class="fleet2model" src="src/assets/img/boeing800.jpg">
 	                        </div>
 	                        <div class="Media__body">
-	                            <!-- ngRepeat: model in fleet.model --><div ng-repeat="model in fleet.model">
-	                                <h3 class="ng-binding">Modelo 737-800A</h3>
-	                                <p class="ng-binding"></p>
-	                                <p ng-show="model.business" class="ng-binding">
+	                            <div>
+	                                <h3>{{ $t('about.fleet.fleets[0].model[0].title') }}</h3>
+	                                <br>
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
-	                                  16 asientos en Clase Ejecutiva
+	                                  {{ $t('about.fleet.fleets[0].model[0].business') }}
 	                                </p>
-	                                <p class="ng-binding">
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon"> 
-	                                  144 asientos en Cabina Principal
+	                                  {{ $t('about.fleet.fleets[0].model[0].general') }}
 	                                </p>
-	                                <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-boeing-737-800a.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[0].model[0].details.url')">
 	                                  <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon">
-	                                  Detalles técnicos
+	                                  {{ $t('about.fleet.fleets[0].model[0].details.label') }}
 	                                </a><br>
-	                                <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[0].model[0].music.url')">
 	                                  <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon">
-	                                  Entretenimiento a bordo
+	                                  {{ $t('about.fleet.fleets[0].model[0].music.label') }}
 	                                </a>
-	                            </div><!-- end ngRepeat: model in fleet.model --><div ng-repeat="model in fleet.model">
-	                                <h3 class="ng-binding">Modelo 737-800B *</h3>
-	                                <p class="ng-binding"></p>
-	                                <p ng-show="model.business" class="ng-binding">
+	                           </div>
+	                           <div>
+	                                <h3>{{ $t('about.fleet.fleets[0].model[1].title') }}</h3>
+	                                <br>
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
-	                                  16 asientos en Clase Ejecutiva
+	                                  {{ $t('about.fleet.fleets[0].model[1].business') }}
 	                                </p>
-	                                <p class="ng-binding">
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon"> 
-	                                  138 asientos en Cabina Principal
+	                                  {{ $t('about.fleet.fleets[0].model[1].general') }}
 	                                </p>
-	                                <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-boeing-737-800b.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[0].model[1].details.url')">
 	                                  <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon">
-	                                  Detalles técnicos
+	                                  {{ $t('about.fleet.fleets[0].model[1].details.label') }}
 	                                </a><br>
-	                                <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[0].model[1].music.url')">
 	                                  <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon">
-	                                  Entretenimiento a bordo
+	                                  {{ $t('about.fleet.fleets[0].model[1].music.label') }}
 	                                </a>
-	                            </div><!-- end ngRepeat: model in fleet.model -->
+	                           </div>
 	                        </div>
 	                    </div>  
 	                </article>
 
-	                <!-- end ngRepeat: fleet in contentCtr.fleet.fleets -->
-	                <article ng-repeat="fleet in contentCtr.fleet.fleets">
+	               <article>
 	                    <div class="Media">
 	                        <div class="Media__figure">
-	                            <h3 class="text-center"><strong class="ng-binding">Embraer 190AR</strong></h3>
-	                            <img ng-src="src/assets/img/embraerAR.jpg" class="fleet2model" src="src/assets/img/embraerAR.jpg">
+	                            <h3 class="text-center"><strong>{{ $t('about.fleet.fleets[1].title') }}</strong></h3>
+	                            <img class="fleet2model" src="src/assets/img/boeing800.jpg">
 	                        </div>
 	                        <div class="Media__body">
-	                            <!-- ngRepeat: model in fleet.model --><div ng-repeat="model in fleet.model">
-	                                <h3 class="ng-binding">Modelo Embraer 190AR A</h3>
-	                                <p class="ng-binding">Copa Airlines Colombia cuenta con 3 aeronaves.</p>
-	                                <p ng-show="model.business" class="ng-binding">
+	                            <div>
+	                                <h3>{{ $t('about.fleet.fleets[1].model[0].title') }}</h3>
+	                                <br>
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
-	                                  10 asientos en Clase Ejecutiva
+	                                  {{ $t('about.fleet.fleets[1].model[0].business') }}
 	                                </p>
-	                                <p class="ng-binding">
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon"> 
-	                                  84 asientos en Cabina Principal
+	                                  {{ $t('about.fleet.fleets[1].model[0].general') }}
 	                                </p>
-	                                <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-embraer-190ar.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[1].model[0].details.url')">
 	                                  <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon">
-	                                  Detalles técnicos
+	                                  {{ $t('about.fleet.fleets[1].model[0].details.label') }}
 	                                </a><br>
-	                                <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[1].model[0].music.url')">
 	                                  <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon">
-	                                  Entretenimiento a bordo
+	                                  {{ $t('about.fleet.fleets[1].model[0].music.label') }}
 	                                </a>
-	                            </div><!-- end ngRepeat: model in fleet.model --><div ng-repeat="model in fleet.model">
-	                                <h3 class="ng-binding">Modelo Embraer 190AR B</h3>
-	                                <p class="ng-binding"></p>
-	                                <p ng-show="model.business" class="ng-binding ng-hide">
+	                           </div>
+	                           <div>
+	                                <h3>{{ $t('about.fleet.fleets[1].model[1].title') }}</h3>
+	                                <br>
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
-	                                  
+	                                  {{ $t('about.fleet.fleets[1].model[1].business') }}
 	                                </p>
-	                                <p class="ng-binding">
+	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon"> 
-	                                  106 asientos en Cabina Principal
+	                                  {{ $t('about.fleet.fleets[1].model[1].general') }}
 	                                </p>
-	                                <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-embraer-190ar-b.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[1].model[1].details.url')">
 	                                  <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon">
-	                                  Detalles técnicos
+	                                  {{ $t('about.fleet.fleets[1].model[1].details.label') }}
 	                                </a><br>
-	                                <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx" class="ng-binding">
+	                                <a :href="$t('about.fleet.fleets[1].model[1].music.url')">
 	                                  <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon">
-	                                  Entretenimiento a bordo
+	                                  {{ $t('about.fleet.fleets[1].model[1].music.label') }}
 	                                </a>
-	                            </div><!-- end ngRepeat: model in fleet.model -->
+	                           </div>
 	                        </div>
 	                    </div>  
-	                </article><!-- end ngRepeat: fleet in contentCtr.fleet.fleets -->
+	                </article>
             	</tab>
-            	<tab label="Hub de las Americas">
+            	<tab label="about.hub.title">
 	                <article>
 	                	<div class="images">
 							<img src="src/assets/img/logo_hub.jpg" class="logo_hub">
 							<img src="src/assets/img/HubdelasAmericas-v1.jpg" class="img_hub">
 						</div>
 
-						<p>Hub de las Américas brinda horarios de vuelo convenientes diseñados para conexiones rápidas y un servicio sin interrupciones de un extremo a otro. Los equipajes son registrados directamente hasta el destino final del pasajero y no es necesario pasar por aduana o por inmigración durante las conexiones. El aeropuerto también cuenta con un gran número de tiendas libres de impuestos.</p>
-						<br>
-						<p>Además, Hub de las Américas ha renovado y extendido recientemente el <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/copa-club.aspx">Copa Club</a>, operado conjuntamente por Copa Airlines y United Airlines. Los pasajeros de <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/clase-ejecutiva.aspx">Clase Ejecutiva</a> y los miembros de Copa Club pueden disfrutar de las instalaciones.</p>
-
-						<h2>La forma más directa para conectarse con el continente americano</h2>
-
-						<p>¿Por qué Hub de las Américas brinda la forma más directa para conectarse con el continente americano?</p>
-
-						<ul class="hub_list">
-							<li>
-								<p>La ubicación geográfica y las condiciones climáticas favorables de Panamá hacen posible que el aeropuerto funcione las 24 horas del día, los 365 días del año</p>
-							</li>
-							<li>
-								<p>Conexiones rápidas sin necesidad de pasar por inmigraciones o aduana</p>
-							</li>
-							<li>
-								<p>Dos pistas modernas garantizan que el tráfico arribe y despegue sin problemas</p>
-							</li>
-							<li>
-								<p>La operación a nivel del mar permite que nuestras aeronaves extiendan su alcance</p>
-							</li>
-							
-						</ul>
-
-						<h2>Conectándose con Copa Airlines</h2>
-
-						<p>¿Por qué motivo volar con Copa Airlines es una experiencia sin igual?</p>
-
-						<ul class="hub_list">
-							<li>
-								<p>Los vuelos de Copa Airlines están programados para reducir los tiempos de conexión, que en promedio llevan 90 minutos.</p>
-							</li>
-							<li>
-								<p>El equipaje es registrado directamente hasta el destino final del pasajero.</p>
-							</li>
-							<li>
-								<p>Más vuelos directos a las ciudades principales del continente americano.</p>
-							</li>
-							<li>
-								<p>Copa Airlines brinda servicio a una gran variedad de destinos en Norte, Centro y Suramérica y el Caribe. Visite nuestra <a href="http://destinationsguide.copaair.com/es/">Guía de destinos.</a></p>
-							</li>
-							<li>
-								<p>Una de las flotas más nuevas de la región con un promedio de 4.3 años. Vea <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/nuestra-flota.aspx">nuestra flota.</a></p>
-							</li>
-							<li>
-								<p>Servicio completo a bordo, que incluye alimentos, bebidas, películas y música.</p>
-							</li>
-							<li>
-								<p>Desempeño superior al 90% en puntualidad, entre los mejores del mundo.</p>
-							</li>
-						</ul>
+						<div v-html="$t('about.hub.text')"></div>
 
 						<img src="src/assets/img/hub-americas-mapa-L.jpg" class="img_hub">
 

@@ -171,7 +171,7 @@ li.active > a, li.active {
   }
 }
 
-#hub .images { padding:20px; }
+article > .images { padding:20px; }
 
 .logo_hub, .img_hub { max-width: 100% }
 

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
+import _ from 'lodash'
 
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
@@ -9,28 +10,33 @@ import Assistance from './components/Assistance.vue'
 import About from './components/About.vue'
 import Tabs from './components/Tabs.vue'
 import Tab from './components/Tab.vue'
-
-import locales from './locales'
-import _ from 'lodash'
+import es from './locales/es'
+import pt from './locales/pt'
+import en from './locales/en'
 import news from './news'
+
 
 // install plugin
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 
 // set lang
-Vue.config.lang = 'en'
+let lang = 'es'
+Vue.config.lang = ''
 Vue.config.fallbackLang = 'es'
 
-// set locales
-Object.keys(locales).forEach(function (lang) {
-  Vue.locale(lang, locales[lang])
-})
 
 window.Vue = Vue;
 window._ = _;
 window.news = news;
 
+// set locales
+Vue.locale(lang, es)
+Vue.locale('pt', pt)
+Vue.locale('en', en)
+
+
+Vue.config.lang = lang
 const router = new VueRouter({
   
   routes: [
@@ -69,8 +75,6 @@ const router = new VueRouter({
   
 })
 
-export default router;
-
 new Vue({
 
     router,
@@ -89,9 +93,9 @@ new Vue({
   	methods: {
   		changeLanguage(lang){
   			//Change the language
-        this.currentLang = lang
-        Vue.config.lang = lang
-        window.lang = lang
+        this.currentLang = lang;
+        Vue.config.lang = lang;
+        window.lang = lang;
         // Crear los nombres de las rutas con sus respectivos parametros
         //Replace route
         this.replaceRoute()
@@ -132,5 +136,9 @@ new Vue({
 
     }
 })
+
+
+
+
 
 
