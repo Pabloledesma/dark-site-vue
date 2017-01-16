@@ -28,9 +28,11 @@ ul > li { list-style: none; }
 
 .logo_copa a img, .lang_selector{ width:100%; }
 
-.logo_copa a img { margin:0; }
+.logo_copa a img { 
+    margin-top: 8px;
+    margin-left: 15px; }
 
-.lang_selector { margin-top:10px; }
+.lang_selector { margin-top:-14px; }
 
 @media(min-width:690px){
   .logo_copa a img, .lang_selector{ max-width:290px; }
