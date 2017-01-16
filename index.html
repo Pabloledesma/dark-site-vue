@@ -3,34 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Dark Site - Copa Airlines</title>
-    <link rel="stylesheet" type="text/css" :href="src/assets/css/normalize.css">
-	<link href="src/assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="src/assets/css/font-awesome.min.css" rel="stylesheet">
-	<link href="src/assets/css/copa_style.css" rel="stylesheet">
-  </head>
-  <body> 
-    <div class="container" id="app">
-        <div class="row header">
-            <div class="logo_copa">
-                <a href="http://www.copaair.com">
-                  <img src="./src/assets/img/COPA_STAR_LOGO_BLACK.png">
-                </a>  
-            </div>
-            <div class="lang_selector">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-globe fa-3"></i></div>
-                        <select class="form-control" v-model="currentLang" @change="changeLanguage(currentLang)" v-cloak>
-                            <option value="en">{{ $t("optionLabel.english") }}</option>
-                            <option value="es">{{ $t("optionLabel.spanish") }}</option>
-                            <option value="pt">{{ $t("optionLabel.portuguese") }}</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <link href="src/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/assets/css/agency.min.css" type="text/css" rel="stylesheet">
+	<!-- <link href="src/assets/css/copa_style.css" rel="stylesheet"> -->
+    <style>
+        @media (min-width: 768px){
+            .navbar-custom.affix {
+                padding: 18px !important;
+            }
+        }
 
-        <top-menu></top-menu> 
+        #mainNav > div > div.navbar-header.page-scroll > a > img { width: 200px; margin-top: -7px; }
+    </style>
+  </head>
+<body id="page-top" class="index"> 
+    <div id="app">
+
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="https://www.copaair.com">
+                        <img src="./src/assets/img/copaLogoW.png">
+                    </a>
+                </div>
+
+               
+                <top-menu></top-menu> 
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    
+        <section>
+            
+        </section> 
+
         <div class="row">
             <div class="col-sm-12 blog-main">
                 <router-view></router-view>
@@ -128,7 +140,12 @@
         </footer>
 
     </div><!-- container -->
-        
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/src/assets/js/bootstrap.min.js"></script>
+       <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/src/assets/js/agency.js"></script>
     <script src="/dist/build.js"></script>
 
   </body>
