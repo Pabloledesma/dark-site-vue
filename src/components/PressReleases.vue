@@ -1,21 +1,14 @@
 <template>
 <div>
-	<div v-for="notice in noticesOrdered">
-		<div class="card">
-		  <div class="card-content">
-		    <div class="media">
-		      
-		      <div class="media-content">
-		        <h2 class="title is-4">{{notice.title}}</h2>
-		      </div>
-		    </div>
-
-		    <div class="content">
-		      <div v-html="notice.body"></div>
-		    </div>
-		  </div>
-		</div>
-	</div>
+	<article v-for="notice in noticesOrdered">
+      <div class="Media">
+        <div class="Media__body">
+        	<h2>{{notice.title}}</h2>
+          <div v-html="notice.body"></div>
+        </div>
+      </div>
+      <hr>
+	</article>
 </div>
 
 </template>

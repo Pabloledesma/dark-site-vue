@@ -63,7 +63,7 @@ let news = {
 				  <h4>Cuarto nivel</h4>
 				  <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
 				  <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-				  <table>
+				  <table class="table">
 				    <thead>
 				      <tr>
 				        <th>One</th>
