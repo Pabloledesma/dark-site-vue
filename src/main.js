@@ -23,26 +23,23 @@ Vue.use(VueI18n)
 // set lang
 let lang = 'es'
 Vue.config.lang = ''
-Vue.config.fallbackLang = 'es'
-
+Vue.config.fallbackLang = 'en'
 
 window.Vue = Vue;
 window._ = _;
 window.news = news;
+window.lang = lang;
 
 // set locales
-Vue.locale(lang, es)
-Vue.locale('pt', pt)
 Vue.locale('en', en)
+Vue.locale('pt', pt)
+Vue.locale(lang, es)
 
 
 Vue.config.lang = lang
 const router = new VueRouter({
   
   routes: [
-    {
-      path: '/', redirect: { path: '/latest-news' }
-    },
     { 
       path: '/press-releases/:lang',
       name: 'pressReleases', 
@@ -50,7 +47,6 @@ const router = new VueRouter({
       alias: [
         '/comunicados-de-prensa/:lang', 
         '/comunicados-da-imprensa/:lang'
-        
       ] 
     },
     { 
@@ -88,20 +84,20 @@ new Vue({
   	},
 
   	data: {
+
+      /**
+      * Idioma por defecto
+      **/
+
   		currentLang: 'en'
   	},
+
   	methods: {
   		changeLanguage(lang){
-  			//Change the language
         this.currentLang = lang;
         Vue.config.lang = lang;
         window.lang = lang;
-        // Crear los nombres de las rutas con sus respectivos parametros
-        //Replace route
         this.replaceRoute()
-        //router.replace( '/' + lang )
-        //this.replaceRoute()
-       //Crear el redireccionamiento a las rutas en su respectivo idioma sin el parametro de lenguage seleccionado
       },
 
       replaceRoute(){
@@ -110,33 +106,30 @@ new Vue({
         while( routePath.length >= 3 ){
           routePath.pop()
         }
+
         routePath = routePath.join().replace(',', '') + '/' + this.currentLang
         router.replace('/' + routePath)
-        // console.log(routePath)
-        
       }
-    
-   
     },
     watch: {
       '$route'(newRoute, oldRoute) {
-        //console.log(newRoute.params.lang)
         this.changeLanguage(newRoute.params.lang)
       },
     },
     created(){
 
       if(this.$route.params.lang === undefined){
-        this.changeLanguage('en');
+        this.changeLanguage('es');
+        router.push({name: 'pressReleases', params: {lang: 'es'}})
       }
 
       if(this.$route.params.lang !== undefined && this.$route.params.lang.length == 2){
         this.changeLanguage(this.$route.params.lang);
       }
 
+
     }
 })
-
 
 
 
