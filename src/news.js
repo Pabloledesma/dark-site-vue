@@ -1,3 +1,6 @@
+//Temporalmente
+let moment = require('moment')
+
 let news = {
 	es: [
 		{
@@ -16,20 +19,19 @@ let news = {
 				<p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
 
 				<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna.</p>
-				<br>
-				<small> 15:35 - 16 Enero 2017</small>
+				
 
 			`,
-			date: new Date(2017, 0, 16, 15, 35)
+			city: 'Madrid',
+			date: moment(new Date(2017, 0, 17, 15, 37)).locale('es').format('LLLL')
 		},
 		{
 			title: 'Noticia corta',
 			body:`
 		      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-		      <br>
-		      <small>14:56 - 15 Enero 2017</small>
 			`,
-			date: new Date(2017, 0, 15, 14, 56)
+			city: 'Rio de Janeiro',
+			date: moment(new Date(2017, 0, 15, 14, 56)).locale('es').format('LLLL')
 		},
 		{
 			title: 'Noticia con todos los elementos',
@@ -103,7 +105,8 @@ let news = {
 				<br>
 				<small>10:25 - 15 Enero 2017</small>
 			`,
-			date: new Date(2017, 0, 15, 10, 25)
+			city: 'Ciudad de Panamá',
+			date: moment(new Date(2017, 0, 15, 10, 25)).locale('es').format('LLLL')
 		}
 	],
 	en: [
@@ -114,7 +117,8 @@ let news = {
 					<p>Body of the new.</p>
 				</div>
 			`,
-			date: new Date(2017, 0, 25, 15, 35)
+			city: 'Bogota',
+			date: moment(new Date(2017, 0, 25, 15, 35)).locale('en-ca').format('LLLL')
 		},
 		{
 			title: 'other title',
@@ -123,7 +127,8 @@ let news = {
 					<p>old notice.</p>
 				</div>
 			`,
-			date: new Date(2016, 11, 12)
+			city: 'Panama',
+			date: moment(new Date(2016, 11, 12, 13, 24)).locale('en-ca').format('LLLL')
 		},
 		{
 			title: 'Middle',
@@ -132,7 +137,8 @@ let news = {
 					<p>middle notice.</p>
 				</div>
 			`,
-			date: new Date(2016, 11, 24)
+			city: 'Cartagena',
+			date: moment(new Date(2016, 11, 24, 4, 48)).locale('en-ca').format('LLLL')
 		}
 	]
 	
