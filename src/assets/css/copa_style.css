@@ -19,6 +19,7 @@ ul > li { list-style: none; }
   display: flex;
 }
 
+
 .logo_copa, .lang_selector {
   -webkit-flex:1;
   -moz-flex:1;
@@ -30,7 +31,9 @@ ul > li { list-style: none; }
 
 .logo_copa a img { 
     margin-top: 8px;
-    margin-left: 15px; }
+    margin-left: 15px; 
+    padding:20px;
+  }
 
 .lang_selector { margin-top:-14px; }
 
