@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
-
+import moment from 'moment'
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
 import PressReleases from './components/PressReleases.vue'
@@ -24,7 +24,7 @@ Vue.use(VueI18n)
 let lang = 'es'
 Vue.config.lang = ''
 Vue.config.fallbackLang = 'en'
-
+window.moment = moment;
 window.Vue = Vue;
 window._ = _;
 window.news = news;
@@ -95,8 +95,26 @@ new Vue({
   	methods: {
   		changeLanguage(lang){
         this.currentLang = lang;
+        this.$emit('change', lang)
         Vue.config.lang = lang;
+        
+
+        //formato del tiempo
+        switch(lang){
+          case 'en':
+            moment.locale('en-ca')
+            break
+          case 'es':
+            moment.locale('es')
+            break
+          case 'pt':
+            moment.locale('pt-br')
+            break
+        }
+
+        window.moment = moment
         window.lang = lang;
+        
         this.replaceRoute()
       },
 
