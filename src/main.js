@@ -3,6 +3,7 @@ import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
 import moment from 'moment'
+import LanguageSelector from './components/LanguageSelector.vue'
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
 import PressReleases from './components/PressReleases.vue'
@@ -41,19 +42,19 @@ const router = new VueRouter({
   
   routes: [
     { 
-      path: '/press-releases/:lang',
+      path: '/comunicados-de-prensa/:lang',
       name: 'pressReleases', 
       component: PressReleases,
       alias: [
-        '/comunicados-de-prensa/:lang', 
+        '/press-releases/:lang', 
         '/comunicados-da-imprensa/:lang'
       ] 
     },
     { 
-      path: '/about-us/:lang',
+      path: '/sobre-nosotros/:lang',
       name: 'aboutUs', 
       component: About,
-      alias: ['/sobre-nosotros/:lang', '/acerca-de-copa-airlines/:lang'] 
+      alias: ['/about-us/:lang', '/acerca-de-copa-airlines/:lang'] 
     },
     { 
       path: '/assistance-to-family/:lang', 
@@ -80,7 +81,8 @@ new Vue({
   	components: {
   		TopMenu,
   		Tabs,
-  		Tab
+  		Tab,
+      LanguageSelector
   	},
 
   	data: {
@@ -88,38 +90,59 @@ new Vue({
       /**
       * Idioma por defecto
       **/
-
-  		currentLang: 'en'
+  		currentLang: 'en',
+      en,
+      es,
+      pt 
   	},
 
-  	methods: {
-  		changeLanguage(lang){
+    methods: {
+      changeLanguage(lang){
+        //this.$emit('changed', lang)
         this.currentLang = lang;
-        this.$emit('change', lang)
+        this.translateRoute(lang)
         Vue.config.lang = lang;
-        
-
-        //formato del tiempo
-        switch(lang){
-          case 'en':
-            moment.locale('en-ca')
-            break
-          case 'es':
-            moment.locale('es')
-            break
-          case 'pt':
-            moment.locale('pt-br')
-            break
-        }
-
         window.moment = moment
         window.lang = lang;
+
+        //formato del tiempo
+        // switch(lang){
+        //   case 'en':
+        //     moment.locale('en-ca')
+        //     break
+        //   case 'es':
+        //     moment.locale('es')
+        //     break
+        //   case 'pt':
+        //     moment.locale('pt-br')
+        //     break
+        // }
+
+
         
-        this.replaceRoute()
       },
 
-      replaceRoute(){
+      translateRoute(lang){
+
+        // Get current url and currentLanguage
         let routePath = this.$route.path.split('/')
+        let currentUrl = routePath[1];
+        let currentLang = routePath[2];
+
+        console.log('current route is: ' + currentUrl);
+        // Search the index of the current route
+        let indexOfCurrentRoute = null;
+        for( const key in this[currentLang].routes ){
+          if ( this[currentLang].routes[key].indexOf( currentUrl ) != -1 ){
+            console.log(this[currentLang].routes[key]);
+            indexOfCurrentRoute = key;
+          }
+        }
+        if(indexOfCurrentRoute){
+          console.log('translated route: ' + this[lang].routes[indexOfCurrentRoute]);
+          router.replace(this[lang].routes[indexOfCurrentRoute]);
+          return;
+        }
         
         while( routePath.length >= 3 ){
           routePath.pop()
@@ -129,16 +152,19 @@ new Vue({
         router.replace('/' + routePath)
       }
     },
+
     watch: {
       '$route'(newRoute, oldRoute) {
         this.changeLanguage(newRoute.params.lang)
       },
     },
-    created(){
 
+    created(){
+      /**
+      * Default route
+      */
       if(this.$route.params.lang === undefined){
-        this.changeLanguage('es');
-        router.push({name: 'pressReleases', params: {lang: 'es'}})
+        router.replace('/comunicados-de-prensa/es');
       }
 
       if(this.$route.params.lang !== undefined && this.$route.params.lang.length == 2){

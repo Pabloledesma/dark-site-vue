@@ -28,10 +28,16 @@
 				news: window.news
 			};
 		},
+		methods: {
+			changeLanguage(lang){
+				console.log('the language was changed: '+ lang);
+			}
+		},
 		computed: {
 			noticesOrdered(){
 				return _.orderBy(this.news[window.lang], 'date', 'desc')
 			}
+			
 		}
 	}
 </script>

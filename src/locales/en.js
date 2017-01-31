@@ -1,4 +1,10 @@
 let en = {
+			routes: [
+				'/latest-news/en',
+				'/press-releases/en',
+				'/assistance-to-family/en',
+				'/about-us/en'
+			],
 			optionLabel: {
 				english: 'English',
 				spanish: 'Spanish',

@@ -1,4 +1,10 @@
 let	pt = {
+		routes: [
+			'/ultimas-noticias/pt',
+			'/comunicados-da-imprensa/pt',
+			'/assistencia-a-familia/pt',
+			'/acerca-de-copa-airlines/pt'
+		],
 			optionLabel: {
 				english: 'Inglês',
 				spanish: 'Espanhol',
