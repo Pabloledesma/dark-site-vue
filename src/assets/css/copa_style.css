@@ -1,7 +1,9 @@
+body { font-family:'Lato', sans-serif; }
+
 h1, h2, h3, h4 { color: #214981; }
-h1, h2 { font-family:'Lato', sans-serif; font-size: 20px;}
-h3, h4 { font-family:'Lato', sans-serif; margin-bottom: 16px; font-size: 14.5px; }
-p, a { font-family:'Lato', sans-serif; font-size: 14px; line-height: 18px; margin:0px  }
+h1, h2 {  font-size: 20px;}
+h3, h4 { margin-bottom: 16px; font-size: 14.5px; }
+p, a { font-size: 14px; line-height: 18px; margin:0px  }
 p { color: #333; }
 a { color: #666; }
 ul > li { list-style: none; }
@@ -252,6 +254,16 @@ footer {
   font-weight: normal;
   color: #000;
   font-size: 1em;
+  text-decoration: uppercase;
+}
+
+@media only screen and (min-width: 1051px){
+  .nav-bottom-desktop .nav-bottom {
+      width: 100%;
+      height: auto;
+      padding: 15px 20px;
+      background: #f6f3f2;
+  }
 }
 
 .footer-content { 
