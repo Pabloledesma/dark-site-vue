@@ -6,7 +6,8 @@
 			    	<h2>{{lastNotice.title}}</h2>
 
 			    	<div class="date-field">
-			    		<span class="country">{{ lastNotice.city }}</span>
+			    		<span class="country" v-if="lastNotice.city">{{ lastNotice.city }}</span>
+			    		<span class="country" v-if="! lastNotice.city">&nbsp;</span>
 			    		<span class="date">{{ lastNotice.date }}</span>
 			    	</div>
 

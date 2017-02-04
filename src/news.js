@@ -13,7 +13,6 @@ let news = {
 				<p>Con estas iniciativas, Continental Airlines y Copa Airlines, seguirán ofreciendo valores agregados en sus productos para satisfacer las necesidades de sus clientes y seguir brindando un servicio de clase mundial.</p>
 				<p>Copa Airlines y Continental Airlines confirman su compromiso de ofrecer el mejor servicio a sus clientes a través de la mejor experiencia de viaje.</p>
 			`,
-			city: 'Ciudad de Panamá',
 			date: moment(new Date(2017, 0, 17, 15, 37)).locale('es').format('LLLL') 	
 		},
 		{
