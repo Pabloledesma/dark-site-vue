@@ -3,7 +3,7 @@ body { font-family:'Lato', sans-serif; }
 h1, h2, h3, h4 { color: #214981; }
 h1, h2 {  font-size: 20px;}
 h3, h4 { margin-bottom: 16px; font-size: 14.5px; }
-p, a { font-size: 14px; line-height: 18px; margin:0px  }
+p, a { font-size: 16px; line-height: 18px; margin:0px  }
 p { color: #333; }
 a { color: #666; }
 ul > li { list-style: none; }
@@ -21,6 +21,7 @@ ul > li { list-style: none; }
   display: flex;
 }
 
+.content { margin-top: 98px }
 
 .logo_copa, .lang_selector {
   -webkit-flex:1;
@@ -31,7 +32,9 @@ ul > li { list-style: none; }
 
 .logo_copa a img, .lang_selector{ width:100%; }
 
-.logo_copa a img { 
+.navbar-form { margin:0; margin-top:-5px; }
+
+.nav-brand a img { 
     margin-top: 8px;
     margin-left: 15px; 
     padding:20px;
@@ -305,11 +308,12 @@ footer {
     -ms-flex-direction:column; 
     flex-direction:column; 
   }
+  .content { margin-top: 30px; }
   .social, .termns { text-align: center; }
   .social { padding: 0; margin-bottom: 20px; margin-top: 20px;  }
   .social a img { width:7%; }
-  .logo_copa { width: 62% }
-  .form-group { margin-top: 0; }
+  a.navbar-brand > img { width: 65% }
+  .navbar-form { margin-top:30px; }
 }
 
 

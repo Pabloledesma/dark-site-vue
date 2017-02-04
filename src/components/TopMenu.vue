@@ -1,11 +1,6 @@
 <template>
-	<nav>
-        <div id="toggle-menu">
-            <button class="navbar-toggler hidden-sm-up collapsed" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false">
-                ☰
-            </button>
-        </div>
-        <ul class="top-menu">
+	<div>
+        <ul class="nav navbar-nav navbar-right">
             <li>
                 <router-link :to="$t('topMenu.latestNews.url')">
                   {{ $t("topMenu.latestNews.text") }}
@@ -32,7 +27,7 @@
                 </a>
             </li>
         </ul>
-	</nav>
+	</div>
 </template>
 
 <script>
