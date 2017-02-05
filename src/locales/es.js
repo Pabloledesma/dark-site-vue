@@ -15,7 +15,7 @@ let es = {
 		pressReleases: { text: 'Comunicados de prensa', url: '/comunicados-de-prensa/es'  },
 		assistance: { text: 'Asistencia Familiar', url: '/asistencia-familiar/es' },
 		about: { text: 'Acerca de Copa Airlines', url: '/sobre-nosotros/es' },
-		copaCom: { text: 'Ir a copa.com', url: 'https://www.copaair.com/es/web/gs' }
+		copaCom: { text: 'Ir a copa.com', url: 'https://www.copaair.com/es' }
 	},
 	latestNewsPage: {
 		title: 'Últimas Noticias'
@@ -77,9 +77,14 @@ let es = {
 					text: 'Inicia operaciones a 5 nuevas ciudades: Georgetown, Guyana; Fort Lauderdale, Estados Unidos; Montreal, Canadá; Santa Clara, Cuba y Campinas; Brasil y finaliza el año con 98 aeronaves. También es galardonada como “Aerolínea Líder de México y Centroamérica” por el World Travel Awards.',
 			},
 		},
-		security:{
-			title: 'Historial de seguridad',
-			text: '...',
+		singleFleet:{
+			title: 'Boeing 737-700',
+			numberOfAircrafts: 'Copa Airlines cuenta con <b>14 aeronaves.</b>',
+			img: 'src/assets/img/boeing700.jpg',
+			business: '12 asientos en clase ejecutiva',
+			general: '112 asientos en cabina principal',
+			details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/boeing-737-700' },
+			music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/es/servicios-a-bordo' }
 		},
 		fleet: {
 			title: 'Flota',
@@ -90,19 +95,19 @@ let es = {
 					model: [
 						{
 							title: 'Modelo 737-800A',
-							caCount: 'Copa Airlines cuenta con 25 aeronaves.',
+							numberOfAircrafts: 'Copa Airlines cuenta con <b>25 aeronaves.</b>',
 							business: '16 asientos en Clase Ejecutiva',
 							general: '144 asientos en Cabina Principal',
-							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/web/gs/flota-anerior' },
-							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' },
+							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/boeing-737-800a' },
+							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/es/servicios-a-bordo' },
 						},
 						{
 							title: 'Modelo 737-800B *',
-							caCount: 'Copa Airlines cuenta con 29 aeronaves.',
+							numberOfAircrafts: 'Copa Airlines cuenta con <b>29 aeronaves.</b>',
 							business: '16 asientos en Clase Ejecutiva',
 							general: '138 asientos en Cabina Principal',
-							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/web/gs/flota-anterior' },
-							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' },
+							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/boeing-737-800b' },
+							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/es/servicios-a-bordo' },
 						},
 
 					],
@@ -114,19 +119,19 @@ let es = {
 					model: [
 						{
 							title: 'Modelo Embraer 190AR A',
-							caCount: 'Copa Airlines cuenta con 12 aeronaves.',
-							cacCount: 'Copa Airlines Colombia cuenta con 3 aeronaves.',
+							numberOfAircrafts: 'Copa Airlines cuenta con <b>12 aeronaves.</b>',
 							business: '10 asientos en Clase Ejecutiva',
 							general: '84 asientos en Cabina Principal',
-							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/web/gs/flota-anterior' },
-							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' },
+							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/embraer-190ar-a' },
+							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/es/servicios-a-bordo' },
 						},
 						{
 							title: 'Modelo Embraer 190AR B',
-							caCount: 'Copa Airlines cuenta con 11 aeronaves.',
+							numberOfAircrafts: 'Copa Airlines cuenta con <b>11 aeronaves.</b>',
+							business: '12 asientos en clase ejecutiva',
 							general: '106 asientos en Cabina Principal',
-							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/web/gs/flota-anterior' },
-							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/documents/20182/161169/guia-entretenimiento-a-bordo.pdf/ca91d0b5-5413-43f6-9df7-9d186413f113' },
+							details: { label: 'Detalles técnicos', url: 'https://www.copaair.com/es/embraer-190ar-b' },
+							music: { label: 'Entretenimiento a bordo', url: 'https://www.copaair.com/es/servicios-a-bordo' },
 						}
 					]
 				}
@@ -178,7 +183,7 @@ let es = {
 					<p>Copa Airlines brinda servicio a una gran variedad de destinos en Norte, Centro y Suramérica y el Caribe. Visite nuestra <a href="http://destinationsguide.copaair.com/es/">Guía de destinos.</a></p>
 				</li>
 				<li>
-					<p>Una de las flotas más nuevas de la región con un promedio de 4.3 años. Vea <a href="https://www.copaair.com/es/web/gs/flota" target="_blank">nuestra flota.</a></p>
+					<p>Una de las flotas más nuevas de la región con un promedio de 4.3 años. Vea <a href="https://www.copaair.com/es/flota" target="_blank">nuestra flota.</a></p>
 				</li>
 				<li>
 					<p>Servicio completo a bordo, que incluye alimentos, bebidas, películas y música.</p>
@@ -195,39 +200,39 @@ let es = {
 			title: 'Atención al cliente',
 			faq: {
 				label: 'Preguntas frecuentes',
-				url: 'https://www.copaair.com/es/web/gs/preguntas-frecuentes',
+				url: 'https://www.copaair.com/es/preguntas-frecuentes',
 			},
 			reservationCenter: {
 				label: 'Oficinas de ventas y centro de reservaciones',
-				url: 'https://www.copaair.com/es/web/gs/centro-de-reservaciones',
+				url: 'https://www.copaair.com/es/centro-de-reservaciones',
 			},
 			refundRequest: {
 				label: 'Solicite un reembolso',
-				url: 'https://www.copaair.com/es/web/gs/solicite-un-reembolso',
+				url: 'https://www.copaair.com/es/solicite-un-reembolso',
 			},
 			baggageClaim: {
 				label: 'Reclamo de equipaje',
-				url: 'https://www.copaair.com/es/web/gs/reclamo-de-equipaje',
+				url: 'https://www.copaair.com/es/reclamo-de-equipaje',
 			},
 			forgottenItems: {
 				label: 'Reporte su artículo olvidado',
-				url: 'https://www.copaair.com/es/web/gs/articulos-olvidados',
+				url: 'https://www.copaair.com/es/articulos-olvidados',
 			},
 			flightNotifications: {
 				label: 'Notificaciones de vuelo',
-				url: 'https://www.copaair.com/es/web/gs/notificaciones-de-vuelo'
+				url: 'https://www.copaair.com/es/notificaciones-de-vuelo'
 			},
 			optionsForCheckin: {
 				label: 'Opciones de registro',
-				url: 'https://www.copaair.com/es/web/gs/opciones-checkin',
+				url: 'https://www.copaair.com/es/opciones-checkin',
 			},
 			commentsAndComplaints: {
 				label: 'Sugerencias y reclamos',
-				url: 'https://www.copaair.com/es/web/gs/sugerencias-y-reclamos',
+				url: 'https://www.copaair.com/es/sugerencias-y-reclamos',
 			},
 			contactUs: {
 				label: 'Contactenos',
-				url: 'https://www.copaair.com/es/web/gs/contactenos',
+				url: 'https://www.copaair.com/es/contactenos',
 			}
 
 		},
@@ -235,23 +240,23 @@ let es = {
 			title: 'Acerca de Copa Airlines',
 			ourHistory: {
 				label: 'Nuestra historia',
-				url: 'https://www.copaair.com/es/web/gs/nuestra-historia',
+				url: 'https://www.copaair.com/es/nuestra-historia',
 			},
 			awards: {
 				label: 'Reconocimientos',
-				url: 'https://www.copaair.com/es/web/gs/reconocimientos',
+				url: 'https://www.copaair.com/es/reconocimientos',
 			},
 			corporateSocialResponsability: {
 				label: 'Responsabilidad social empresarial',
-				url: 'https://www.copaair.com/es/web/gs/responsabilidad-social-empresarial',
+				url: 'https://www.copaair.com/es/responsabilidad-social-empresarial',
 			},
 			alliances: {
 				label: 'Alianzas',
-				url: 'https://www.copaair.com/es/web/gs/alianzas',
+				url: 'https://www.copaair.com/es/alianzas',
 			},
 			aeroRepublica: {
 				label: 'Aero República',
-				url: 'https://www.copaair.com/es/web/gs/aero-republica',
+				url: 'https://www.copaair.com/es/aero-republica',
 			},
 			investorRelations: {
 				label: 'Relaciones con los inversionistas',
@@ -259,69 +264,69 @@ let es = {
 			},
 			hubOfTheAmericas: {
 				label: 'Hub de las Américas',
-				url: 'https://www.copaair.com/es/web/gs/hub-de-las-americas',
+				url: 'https://www.copaair.com/es/hub-de-las-americas',
 			},
 			fleet: {
 				label: 'Flota',
-				url: 'https://www.copaair.com/es/web/gs/flota',
+				url: 'https://www.copaair.com/es/flota',
 			},
 			workWithUs: {
 				label: 'Trabaje con nosotros',
-				url: 'https://www.copaair.com/es/web/gs/trabaje-con-nosotros',
+				url: 'https://www.copaair.com/es/trabaje-con-nosotros',
 			},
 			securePurchases: {
 				label: 'Compras seguras',
-				url: 'https://www.copaair.com/es/web/gs/compras-seguras'
+				url: 'https://www.copaair.com/es/compras-seguras'
 			},
 			news: {
 				label: 'Noticias',
-				url: 'https://www.copaair.com/es/web/gs/noticias',
+				url: 'https://www.copaair.com/es/noticias',
 			},
 		},
 		col3: {
 			title: 'Información Legal',
 			customerCommitment: {
 				label: 'Compromiso con el pasajero',
-				url: 'https://www.copaair.com/es/web/gs/compromiso-pasajero',
+				url: 'https://www.copaair.com/es/compromiso-pasajero',
 			},
 			affidavitTravelToCuba: {
 				label: 'Declaración jurada de viajes a Cuba',
-				url: 'https://www.copaair.com/es/web/gs/declaracion-jurada-cuba',
+				url: 'https://www.copaair.com/es/declaracion-jurada-cuba',
 			},
 			lengthyTarmacsDelays: {
 				label: 'Plan de demoras prolongadas',
-				url: 'https://www.copaair.com/es/web/gs/demoras-prolongadas',
+				url: 'https://www.copaair.com/es/demoras-prolongadas',
 			},
 			eDBVBrazil: {
 				label: 'Declaración electrónica (e-DBV-Brasil)',
-				url: 'https://www.copaair.com/es/web/gs/declaracion-electronica-de-bienes-brasil',
+				url: 'https://www.copaair.com/es/declaracion-electronica-de-bienes-brasil',
 			},
 			digitalTaxReceiptMexico: {
 				label: 'Comprobante fiscal digital de México',
-				url: 'https://www.copaair.com/es/web/gs/comprobante-fiscal-digital-mexico',
+				url: 'https://www.copaair.com/es/comprobante-fiscal-digital-mexico',
 			},
 		},
 		copy: {
 			title: 'Copyright © 2016 Copa Airlines, Incorporado. Todos los derechos reservados.',
 			siteMap: {
 				label: 'Mapa del sitio',
-				url: 'https://www.copaair.com/es/web/gs/mapa-del-sitio',
+				url: 'https://www.copaair.com/es/mapa-del-sitio',
 			},
 			contractOfCarriage: {
 				label: 'Contrato de transporte',
-				url: 'https://www.copaair.com/es/web/gs/contrato-transporte',
+				url: 'https://www.copaair.com/es/contrato-transporte',
 			},
 			termsAndConditions: {
 				label: 'Términos y condiciones',
-				url: 'https://www.copaair.com/es/web/gs/terminos-condiciones',
+				url: 'https://www.copaair.com/es/terminos-condiciones',
 			},
 			contactUs: {
 				label: 'Contáctenos',
-				url: 'https://www.copaair.com/es/web/gs/contactenos',
+				url: 'https://www.copaair.com/es/contactenos',
 			}, 
 			webDeals: {
 				alt: 'Promociones web',
-				url: 'https://www.copaair.com/es/web/gs/promociones-web',
+				url: 'https://www.copaair.com/es/promociones-web',
 			},
 			starAlliance: {
 				url: 'https://www.copaair.com/es/gs/star-alliance',
@@ -329,7 +334,7 @@ let es = {
 			},
 			privacyPolicy: {
 				label: 'Politicas de privacidad',
-				url: 'https://www.copaair.com/es/web/gs/politica-privacidad'
+				url: 'https://www.copaair.com/es/politica-privacidad'
 			}
 		}
 	}

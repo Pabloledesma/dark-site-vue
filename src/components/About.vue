@@ -153,10 +153,6 @@
 	                  </div>
 	                </article><!-- end ngRepeat: year in contentCtr.history.nyears -->
             	</tab>
-            	<tab label="about.security.title">
-	                <h2>{{$t('about.security.title')}}</h2>
-	                <p>{{$t('about.security.text')}}</p>
-            	</tab>
             	<tab label="about.fleet.title">
 	                <article>
 	                    <div class="Media">
@@ -165,14 +161,15 @@
 	                            <img class="fleet-img" src="src/assets/img/boeing700.jpg">
 	                        </div>
 	                        <div class="Media__body">
-	                            <p>{{ $t('about.singleFleet.caCount') }}</p>
+	                            <p v-html="$t('about.singleFleet.numberOfAircrafts')"></p>
 	                            <p><img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon">{{ $t('about.singleFleet.business') }}</p>
 	                            <p><img src="src/assets/img/icon-asiento-cabina-principal.png" class="fleet-icon">{{ $t('about.singleFleet.general') }}</p>
-	                            <a href="http://www.copaair.com/sites/cc/es/nuestros-productos/pages/detalles-tecnicos-boeing-737-700.aspx">
-	                            <img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon"> 
-	                           {{ $t('about.singleFleet.details.label') }}
-	                            </a><br>
-	                            <a href="http://www.copaair.com/sites/cc/es/informacion-de-viaje/pages/durante-el-vuelo.aspx">
+	                            <a :href="$t('about.singleFleet.details.url')">
+	                            	<img src="src/assets/img/icon-detalles-tecnicos.png" class="fleet-icon"> 
+	                           		{{ $t('about.singleFleet.details.label') }}
+	                            </a>
+	                            <br>
+	                            <a :href="$t('about.singleFleet.music.url')">
 	                                <img src="src/assets/img/icon-entretenimient-a-bordo.png" class="fleet-icon"> 
 	                                {{ $t('about.singleFleet.music.label') }}
 	                            </a>
@@ -190,6 +187,7 @@
 	                            <div>
 	                                <h3>{{ $t('about.fleet.fleets[0].model[0].title') }}</h3>
 	                                <br>
+	                                <p v-html="$t('about.fleet.fleets[0].model[0].numberOfAircrafts')"></p>
 	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
 	                                  {{ $t('about.fleet.fleets[0].model[0].business') }}
@@ -210,6 +208,7 @@
 	                           <div>
 	                                <h3>{{ $t('about.fleet.fleets[0].model[1].title') }}</h3>
 	                                <br>
+	                                 <p v-html="$t('about.fleet.fleets[0].model[1].numberOfAircrafts')"></p>
 	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
 	                                  {{ $t('about.fleet.fleets[0].model[1].business') }}
@@ -241,6 +240,7 @@
 	                            <div>
 	                                <h3>{{ $t('about.fleet.fleets[1].model[0].title') }}</h3>
 	                                <br>
+	                                 <p v-html="$t('about.fleet.fleets[1].model[0].numberOfAircrafts')"></p>
 	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
 	                                  {{ $t('about.fleet.fleets[1].model[0].business') }}
@@ -261,6 +261,7 @@
 	                           <div>
 	                                <h3>{{ $t('about.fleet.fleets[1].model[1].title') }}</h3>
 	                                <br>
+	                                 <p v-html="$t('about.fleet.fleets[1].model[1].numberOfAircrafts')"></p>
 	                                <p>
 	                                  <img src="src/assets/img/icon-asiento-business-class.png" class="fleet-icon"> 
 	                                  {{ $t('about.fleet.fleets[1].model[1].business') }}
