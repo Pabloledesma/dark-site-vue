@@ -160,7 +160,7 @@ let news = {
 				</ul>
 			`,
 			city: 'Panama',
-			date: moment(new Date(2017, 0, 19, 11, 38)).locale('en-ca').format('LLLL') 
+			date: moment(new Date(2017, 0, 19, 10, 25)).locale('en-ca').format('LLLL') 
 		}
 	],
 	pt: [

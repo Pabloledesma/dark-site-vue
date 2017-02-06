@@ -19,14 +19,22 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import news from '../news'
 
 	export default {
 		name: 'LatestNews',
+		mounted(){
+			Event.$on('changeLanguage', (lang) => {
+				if(news[lang]){
+					this.currentLang = lang;
+					this.news = news[lang];
+				}
+			});
+		},
 		data(){
 			return {
-				news: news
+				news: news.es,
+				currentLang: 'es'
 			};
 		},
 
@@ -35,7 +43,7 @@ import news from '../news'
 		*/
 		computed: {
 			lastNotice(){
-				return _.orderBy(this.news[window.lang], 'date').pop()
+				return _.orderBy(this.news, 'date').pop()
 			}
 		}
 	}

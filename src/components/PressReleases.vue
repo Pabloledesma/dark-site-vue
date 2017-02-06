@@ -21,21 +21,28 @@
 
 </template>
 <script>
+import news from '../news'
+
 	export default {
 		name: 'PressReleases',
+		mounted(){
+			Event.$on('changeLanguage', (lang) => {
+				if(news[lang]){
+					this.currentLang = lang;
+					this.news = news[lang];
+				}
+			});
+		},
 		data(){
 			return {
-				news: window.news
+				news: news.es,
+				currentLang: 'es'
 			};
 		},
-		methods: {
-			changeLanguage(lang){
-				console.log('the language was changed: '+ lang);
-			}
-		},
+
 		computed: {
 			noticesOrdered(){
-				return _.orderBy(this.news[window.lang], 'date', 'desc')
+				return _.orderBy(this.news, 'date')
 			}
 			
 		}

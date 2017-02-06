@@ -3,7 +3,7 @@
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-globe fa-3"></i></div>
-                <select class="form-control" v-model="language" @input="changeLanguage($event.target.value)" v-cloak>
+                <select class="form-control" v-model="language" @input="changeLanguage($event.target.value, $event)" v-cloak>
                     <option value="en">{{ $t("optionLabel.english") }}</option>
                     <option value="es">{{ $t("optionLabel.spanish") }}</option>
                     <option value="pt">{{ $t("optionLabel.portuguese") }}</option>
@@ -30,6 +30,7 @@
 		methods: {
 			changeLanguage(lang){
 				this.$emit('input', lang);
+				Event.$emit('changeLanguage', lang);
 				this.language = lang;
 			}
 		}

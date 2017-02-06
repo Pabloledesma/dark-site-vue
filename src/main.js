@@ -30,6 +30,7 @@ window.Vue = Vue;
 window._ = _;
 window.news = news;
 window.lang = lang;
+window.Event = new Vue();
 
 // set locales
 Vue.locale('en', en)
@@ -129,17 +130,17 @@ new Vue({
         let currentUrl = routePath[1];
         let currentLang = routePath[2];
 
-        console.log('current route is: ' + currentUrl);
+        //console.log('current route is: ' + currentUrl);
         // Search the index of the current route
         let indexOfCurrentRoute = null;
         for( const key in this[currentLang].routes ){
           if ( this[currentLang].routes[key].indexOf( currentUrl ) != -1 ){
-            console.log(this[currentLang].routes[key]);
+            //console.log(this[currentLang].routes[key]);
             indexOfCurrentRoute = key;
           }
         }
         if(indexOfCurrentRoute){
-          console.log('translated route: ' + this[lang].routes[indexOfCurrentRoute]);
+          //console.log('translated route: ' + this[lang].routes[indexOfCurrentRoute]);
           router.replace(this[lang].routes[indexOfCurrentRoute]);
           return;
         }
