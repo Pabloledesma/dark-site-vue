@@ -2,36 +2,32 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-N9SD88');</script>
-          <!-- End Google Tag Manager -->
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N9SD88');</script>
+
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8">
     <title>Dark Site - Copa Airlines</title>
 
-    <!-- development -->
-    <link href="src/assets/css/normalize.css" rel="stylesheet" type="text/css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="src/assets/css/normalize.css" rel="stylesheet" type="text/css" >
 	<link href="src/assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="src/assets/css/font-awesome.min.css" rel="stylesheet">
 	<link href="src/assets/css/copa_style.css" rel="stylesheet">
 
-    <!-- production -->
-   <!--  <link href="darkSite/src/assets/css/normalize.css" rel="stylesheet" type="text/css" >
-    <link href="darkSite/src/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="darkSite/src/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="darkSite/src/assets/css/copa_style.css" rel="stylesheet"> -->
   </head>
   <body>
-  <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9SD88"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) --> 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9SD88"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) --> 
     <div id="app">
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -44,7 +40,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="http://www.copaair.com">
-                        <img src="./src/assets/img/logo-copa-blanco.png">
+                        <img src="src/assets/img/logo-copa-blanco.png">
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -57,16 +53,6 @@
     </nav>
 
         <div class="container content">
-            <!-- <div class="row header">
-                <div class="logo_copa">
-                    <a href="http://www.copaair.com">
-                      <img src="./src/assets/img/copaLogoBlack.png">
-                    </a>  
-                </div>
-                <language-selector currentLang="es" @input="changeLanguage"></language-selector>
-            </div> -->
-
-            
             <div class="row">
                 <div class="col-sm-12 blog-main">
                     <router-view></router-view>
@@ -174,10 +160,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
     <!-- development -->    
-    <script src="/dist/build.js"></script>
+    <!-- <script src="/dist/build.js"></script> -->
 
-    <!-- Production -->
+    <!-- Production AZURE server -->
     <!-- <script src="/darkSite/dist/build.js"></script> -->
+
+    <!-- Production AWS server -->
+    <script src="/promotions/darkSite-vue/dist/build.js"></script>
 
   </body>
 </html>

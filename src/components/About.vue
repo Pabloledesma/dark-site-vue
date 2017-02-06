@@ -56,7 +56,7 @@
 	                <article>
 	                  <div class="Media">
 	                    <div class="Media__figure">
-	                      <img class="history-img pull-left" src="/src/assets/img/2005.jpg">
+	                      <img class="history-img pull-left" src="src/assets/img/2005.jpg">
 	                    </div>
 	                    <div class="Media__body">
 	                      <h2>2005</h2>
