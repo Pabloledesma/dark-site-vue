@@ -1,8 +1,11 @@
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
 import moment from 'moment'
+import Auth from './components/Auth.vue'
+import Create from './components/Create.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
@@ -15,11 +18,17 @@ import es from './locales/es'
 import pt from './locales/pt'
 import en from './locales/en'
 import news from './news'
+import fs from 'fs';
 
+//File system
 
 // install plugin
+Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+
+Vue.http.options.emulateJSON = true;
+Vue.http.options.emulateHTTP = true;
 
 // set lang
 let lang = 'es'
@@ -42,6 +51,16 @@ Vue.config.lang = lang
 const router = new VueRouter({
   
   routes: [
+    {
+      path: '/login',
+      name: 'Login',
+      component: Auth
+    },
+    {
+      path: '/create',
+      name: 'Create',
+      component: Create
+    },
     { 
       path: '/comunicados-de-prensa/:lang',
       name: 'pressReleases', 
@@ -80,6 +99,8 @@ new Vue({
   	el: '#app',
 
   	components: {
+      Auth,
+      Create,
   		TopMenu,
   		Tabs,
   		Tab,
@@ -99,28 +120,11 @@ new Vue({
 
     methods: {
       changeLanguage(lang){
-        //this.$emit('changed', lang)
         this.currentLang = lang;
         this.translateRoute(lang)
         Vue.config.lang = lang;
         window.moment = moment
         window.lang = lang;
-
-        //formato del tiempo
-        // switch(lang){
-        //   case 'en':
-        //     moment.locale('en-ca')
-        //     break
-        //   case 'es':
-        //     moment.locale('es')
-        //     break
-        //   case 'pt':
-        //     moment.locale('pt-br')
-        //     break
-        // }
-
-
-        
       },
 
       translateRoute(lang){
@@ -155,7 +159,12 @@ new Vue({
     },
 
     watch: {
+      /**
+      * Observa si la url es modificada, toma el idioma de la url y traduce la url
+      * Si el usuario quiere loguearse o crear una noticia no es necesario realizar el procedimiento anterior.
+      */
       '$route'(newRoute, oldRoute) {
+        if(newRoute.name == 'Login' || newRoute.name == 'Create') return;
         this.changeLanguage(newRoute.params.lang)
       },
     },

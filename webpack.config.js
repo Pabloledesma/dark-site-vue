@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        //exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -42,6 +42,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
+    
   },
   devServer: {
     historyApiFallback: true,
@@ -50,6 +51,7 @@ module.exports = {
   performance: {
     hints: false
   },
+ 
   devtool: '#eval-source-map'
 }
 
