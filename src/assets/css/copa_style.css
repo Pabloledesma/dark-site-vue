@@ -32,13 +32,7 @@ ul > li { list-style: none; }
 
 .logo_copa a img, .lang_selector{ width:100%; }
 
-.navbar-form { margin:0; margin-top:-5px; }
 
-.nav-brand a img { 
-    margin-top: 8px;
-    margin-left: 15px; 
-    padding:20px;
-  }
 
 .lang_selector { margin-top:-14px; }
 
@@ -62,10 +56,21 @@ ul > li { list-style: none; }
 
 /*** Navigation ***/
 
+.navbar-inverse { background-color: #333 }
+
+a.navbar-brand > img { width: 65% !important }
+
 .top-menu {  background: grey; }
 
 .navbar-toggle { border:none; }
 
+.navbar-form { margin:0; margin-top:-5px; }
+
+.nav-brand a img { 
+    margin-top: 8px;
+    margin-left: 15px; 
+    padding:20px;
+  }
 
 
 
@@ -312,7 +317,7 @@ footer {
   .social, .termns { text-align: center; }
   .social { padding: 0; margin-bottom: 20px; margin-top: 20px;  }
   .social a img { width:7%; }
-  a.navbar-brand > img { width: 65% }
+  
   .navbar-form { margin-top:30px; }
 }
 
