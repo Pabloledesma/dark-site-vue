@@ -76,6 +76,12 @@ a.navbar-brand > img { width: 65% !important }
 
 
 @media screen and (min-width: 768px ){
+
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   #toggle-menu {display: none}
 
   .top-menu {

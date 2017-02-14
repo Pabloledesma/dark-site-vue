@@ -1,5 +1,5 @@
 <template>
-<div>
+<div v-once>
 	<article v-for="notice in noticesOrdered">
       <div class="Media">
         <div class="Media__body">
@@ -42,7 +42,7 @@ import news from '../news'
 
 		computed: {
 			noticesOrdered(){
-				return _.orderBy(this.news, 'date')
+				return _.orderBy(this.news, 'date', 'desc')
 			}
 			
 		}

@@ -2,6 +2,135 @@ let moment = require('moment')
 let news = {
 	es: [
 		{
+			title: 'COPA AIRLINES ANUNCIA EL INICIO DE OPERACIONES A CHICLAYO, SU NUEVO DESTINO EN PERÚ',
+			body: `
+			<p align="center">
+    <strong>
+        <u>
+            COPA AIRLINES ANUNCIA EL INICIO DE OPERACIONES A CHICLAYO, SU NUEVO
+            DESTINO EN PERÚ
+        </u>
+    </strong>
+    <strong><u></u></strong>
+</p>
+<p>
+    <strong><u></u></strong>
+</p>
+<p>
+    •
+    <em>
+        A partir del 28 de junio de 2016, Copa Airlines iniciará vuelos
+        directos desde el Hub de las Américas en Panamá a la Ciudad de Chiclayo
+        en Perú.
+    </em>
+    <em></em>
+</p>
+<p>
+    <em> </em>
+</p>
+<p>
+    •
+    <em>
+        La empresa panameña amplía sus destinos a 76 ciudades, siendo Chiclayo
+        la nueva ciudad peruana en conectarse con 30 países de Norte, Centro,
+        Suramérica y el Caribe.
+    </em>
+    <em></em>
+</p>
+<p>
+    <em></em>
+</p>
+<p>
+    •
+    <em>
+        Con la adición de esta nueva ruta, Copa Airlines potencia las economías
+        del norte peruano, brindándole la oportunidad de fortalecer los lazos
+        comerciales con el continente americano.
+    </em>
+    <em></em>
+</p>
+<p>
+    <em></em>
+</p>
+<p>
+    <strong>Lima</strong>
+    , <strong>18 de marzo de 2016.</strong> – Copa Airlines {NYSE: CPA}
+    subsidiaria de Copa Holdings, S. A, y miembro de la red global de
+    aerolíneas Star Alliance, anunció su nueva ruta entre la histórica ciudad
+    de Chiclayo y la Ciudad de Panamá, a partir del próximo 28 de junio de
+    2016, con dos frecuencias semanales*. Con este destino, la Aerolínea
+    incrementará la conectividad del norte del Perú con el resto del continente
+    americano.
+</p>
+<p>
+    <em></em>
+</p>
+<p>
+    <em>
+        “Desde hace 17 años ofrecemos a Perú la mejor conectividad con Norte,
+        Centroamérica y el Caribe, a través de nuestro Hub de las Américas, en
+        la Ciudad de Panamá, y hoy tenemos el placer de anunciar nuestro nuevo
+        destino en el país, ofreciendo mayores oportunidades turísticas y de
+        negocios para el norte del país, con especial impacto en la ciudad de
+        Chiclayo y otras ciudades cercanas”
+    </em>
+    destacó Pedro Heilbron, Presidente Ejecutivo de Copa Airlines.<em></em>
+</p>
+<p>
+    Chiclayo, conocida como la “Ciudad de la Amistad”, por lo servicial de sus
+    habitantes, y lugar en donde se realizaron los más recientes y
+    espectaculares descubrimientos arqueológicos en el país, es visto como un
+    destino vacacional por excelencia. Además de la excelente gastronomía,
+    Chiclayo recibe a sus visitantes con atracciones como las pirámides de
+    Túcume, el Palacio Municipal, las fantásticas catedrales y la tumba
+    ornamental del Señor de Sipán, además del Mercado Modelo que ofrece a sus
+    visitantes artículos místicos del Mercado de los Brujos.
+</p>
+<p>
+    <em></em>
+</p>
+<p>
+    Ubicada a 770 Km de la capital peruana, Chiclayo se encuentra al noreste
+    del país y ofrece una inagotable riqueza de restos arqueológicos, productos
+    artesanales y gastronómicos, que enriquecen la oferta turística de esta
+    región, posicionándola como un atractivo histórico, cultural, religioso e
+    incluso de playas y balnearios. Cerca de Chiclayo se ubican el Santuario
+    Histórico Bosque de Pómac, la reserva de Chaparrí y Laquipampa, áreas
+    naturales protegidas de gran biodiversidad de bosques secos y protección de
+    especies endémicas y en vías de extinción.
+</p>
+<p>
+    El vuelo CM 340 iniciará con dos frecuencias semanales los días martes y
+    viernes, saliendo a las 11:23 a.m. del Aeropuerto Internacional de Tocumen,
+    en Panamá, y llegando a las 14:16 p.m. al Aeropuerto Internacional Capitán
+    FAP José A. Quiñones en Chiclayo, Perú. El vuelo de regreso, CM 341,
+    partirá los días lunes y viernes a las 15:01 p.m., llegando a Panamá a las
+    17:37 p.m.
+</p>
+<p>
+    Copa Airlines, para este vuelo entre Chiclayo y Panamá, ofrecerá conexiones
+    convenientes desde del Hub de las Américas, en Panamá, principalmente a
+    mercados importantes como las 12 ciudades que opera la Aerolínea en Estados
+    Unidos, las 6 en México y las principales ciudades de Centro América, el
+    norte de Suramérica y el Caribe.
+</p>
+<p>
+    <em></em>
+</p>
+<p>
+    Actualmente, Copa Airlines opera un promedio de 315 vuelos diarios de
+    salida y de entrada a través de su <em>Hub de las Américas,</em> en el
+    Aeropuerto Internacional de Tocumen, que lo consolida como el centro de
+    conexiones aéreo con más vuelos internacionales en toda América Latina.
+</p>
+<p>
+    <em>*sujeto a aprobación gubernamental.</em>
+    <em></em>
+</p>
+			`,
+			date: moment(new Date(2016, 2, 18, 14, 24)).locale('es').fromNow()
+		},
+		{
 			title: 'Copa Airlines y Continental Airlines presentan programas y servicios para clientes corporativos',
 			body: `
 				<ul>

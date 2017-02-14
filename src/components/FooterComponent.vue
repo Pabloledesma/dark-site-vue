@@ -75,16 +75,16 @@
                         <a :href="$t('footer.copy.privacyPolicy.url')" class="customerService" v-cloak target="_blank">{{$t('footer.copy.privacyPolicy.label')}}</a> | 
                         <a :href="$t('footer.copy.termsAndConditions.url')" class="customerService" v-cloak target="_blank">{{$t('footer.copy.termsAndConditions.label')}}</a> | 
                         <a :href="$t('footer.copy.contactUs.url')" class="customerService" v-cloak target="_blank">{{$t('footer.copy.contactUs.label')}}</a><br>
-                        <a href="">
+                        <a href="https://www.google.com/chrome/" target="_blank">
                         	<img src="src/assets/img/chrome-logo.png">
                         </a>
-						<a href="">
+						<a href="https://www.mozilla.org/firefox/new/" target="_blank">
 							<img src="src/assets/img/mozilla-logo.png">
 						</a>
-						<a href="">
+						<a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">
 							<img src="src/assets/img/explorer-logo.png">
 						</a>
-						<a href="">
+						<a href="http://www.apple.com/safari/" target="_blank">
 							<img src="src/assets/img/safari-logo.png">
 						</a>
                     </div>
