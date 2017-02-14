@@ -56,7 +56,7 @@ ul > li { list-style: none; }
 
 /*** Navigation ***/
 
-.navbar-inverse { background-color: #333 }
+.navbar-inverse { background-color: #343433 !important; }
 
 a.navbar-brand > img { width: 65% !important }
 
@@ -258,12 +258,14 @@ footer {
 
 }
 
-.grid__column > h3 {
+.nav-bottom-desktop > .nav-bottom>.grid__column > a {
   font-weight: normal;
-  color: #000;
-  font-size: 1em;
-  text-decoration: uppercase;
+  color: #676767;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 5px;
 }
+.grid__column > a > span { padding-right: 10px }
 
 @media only screen and (min-width: 1051px){
   .nav-bottom-desktop .nav-bottom {
@@ -275,36 +277,50 @@ footer {
 }
 
 .footer-content { 
-  background: rgb(239,239,239);
+  background: #676767;
+  padding: 25px 0 25px 15px;
+  color: #555;
 }
 
-.footer-content > .grid__column, .footer-title > .grid__column { border-right: 1px solid rgba(0,0,0,0.2) }
+.hide { display: none } 
 
+.footer-content > .grid__column, .footer-title > .grid__column { border-right: 2px dotted rgba(0,0,0,0.3) }
+.footer-content > .grid__column, .footer-title > .grid__column:last-child {border:none;}
+.footer-content > .grid__column { border-right: 2px dotted rgba(255, 255, 255, 0.3); }
+
+.footer-content > .grid__column:last-child { border:none; }
 .footer-nav li { font-size: .8em; }
 
 .footer-nav li a { 
-  margin-left: 5px; 
+  margin-left: 30px; 
   padding-top:5px; 
   padding-bottom: 5px; 
   display: -webkit-flex; 
   display: -moz-flex; 
   display: -ms-flex; 
-  display: flex; 
+  display: flex;
+  color: #fff;
+  font-size: 14px; 
 } 
 
 .footer-title { 
   background: rgb(180, 180, 180);
 }
 
-
+.footer { background-color: #343433; color:#fff; }
 
 .footer-title > .grid__column { text-align: left; margin-left: 10px; }
 
-.social, .termns { padding-top: 30px; }
-
+.social, .termns { padding: 22px; }
+.termns > p, .termns > a {
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+}
 .social { text-align: right; }
+.grid__column.social > a > img {  padding: 11px; }   
 
-.terms { text-align: left; }
+.termns { text-align: left; }
 
 @media(max-width:450px){
   .Media, .footer { 

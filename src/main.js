@@ -11,6 +11,7 @@ import Assistance from './components/Assistance.vue'
 import About from './components/About.vue'
 import Tabs from './components/Tabs.vue'
 import Tab from './components/Tab.vue'
+import FooterComponent from './components/FooterComponent.vue'
 import es from './locales/es'
 import pt from './locales/pt'
 import en from './locales/en'
@@ -83,7 +84,8 @@ new Vue({
   		TopMenu,
   		Tabs,
   		Tab,
-      LanguageSelector
+      LanguageSelector,
+      FooterComponent
   	},
 
   	data: {
