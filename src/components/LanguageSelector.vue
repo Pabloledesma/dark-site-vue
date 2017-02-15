@@ -1,12 +1,16 @@
 <template>
 	<div class="lang_selector">
-        <div class="form-group">
-            <select class="form-control input-sm" v-model="language" @input="changeLanguage($event.target.value, $event)" v-cloak>
-                <option value="en">{{ $t("optionLabel.english") }}</option>
-                <option value="es">{{ $t("optionLabel.spanish") }}</option>
-                <option value="pt">{{ $t("optionLabel.portuguese") }}</option>
-            </select>
-    	</div>
+	    <div class="form-group">
+			<div class="input-group">
+				<div class="input-group-addon"><i class="fa fa-globe fa-3"></i></div>
+	            <select class="form-control" v-model="language" @input="changeLanguage($event.target.value, $event)" v-cloak>
+	                <option value="en">{{ $t("optionLabel.english") }}</option>
+	                <option value="es">{{ $t("optionLabel.spanish") }}</option>
+	                <option value="pt">{{ $t("optionLabel.portuguese") }}</option>
+	            </select>
+	    	</div>
+		</div>
+    </div>
 </template>
 <script>
 	export default {
@@ -32,12 +36,3 @@
 		}
 	}
 </script>
-<style>
-	.form-control { 
-		height: 28px; 
-		padding: 4px 13px;
-		color: #fff;
-		background-color: #989898;
-		border:none; 
-	}
-</style>

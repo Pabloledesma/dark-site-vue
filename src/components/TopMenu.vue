@@ -1,6 +1,6 @@
 <template> 
 	<div>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
             <li>
                 <router-link :to="$t('topMenu.latestNews.url')" role="button">
                   {{ $t("topMenu.latestNews.text") }}
@@ -38,13 +38,5 @@ export default {
 }
 </script>
 
-<style>
-    ul.navbar-right { margin-right:20px; }
-    ul.navbar-right>li>a { 
-        font-size: 14px; 
-        padding-left: 7px;
-        padding-right: 7px;
-        line-height: 30px; 
-    }
-</style>
+
  
