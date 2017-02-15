@@ -1,4 +1,4 @@
-<template>
+<template> 
 	<div>
         <ul class="nav navbar-nav navbar-right">
             <li>
