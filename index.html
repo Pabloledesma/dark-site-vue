@@ -63,7 +63,18 @@
         <footer-component></footer-component>
     </div>
 
-
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDwB6HDEeLPprACvtOE72FBnweOAwPrTUo",
+        authDomain: "darksite-cd058.firebaseapp.com",
+        databaseURL: "https://darksite-cd058.firebaseio.com",
+        storageBucket: "darksite-cd058.appspot.com",
+        messagingSenderId: "924962095903"
+      };
+      firebase.initializeApp(config);
+    </script>
    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -77,6 +88,8 @@
 
     <!-- Production AWS server -->
     <!-- <script src="/promotions/darkSite-vue/dist/build.js"></script> -->
+
+
 
   </body>
 </html>
