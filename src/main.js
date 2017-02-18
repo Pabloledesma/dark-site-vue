@@ -1,8 +1,12 @@
 import Vue from 'vue'
+import Firebase from 'firebase'
+import VueFire from 'vuefire'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
 import moment from 'moment'
+import Login from './components/Login.vue'
+import Create from './components/Create.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
 import TopMenu from './components/TopMenu.vue'
 import LatestNews from './components/LatestNews.vue'
@@ -17,15 +21,27 @@ import pt from './locales/pt'
 import en from './locales/en'
 import news from './news'
 
-
 // install plugin
+Vue.use(VueFire)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+
+var config = {
+    apiKey: "AIzaSyDwB6HDEeLPprACvtOE72FBnweOAwPrTUo",
+    authDomain: "darksite-cd058.firebaseapp.com",
+    databaseURL: "https://darksite-cd058.firebaseio.com",
+    storageBucket: "darksite-cd058.appspot.com",
+    messagingSenderId: "924962095903"
+};
+
+var db = Firebase.initializeApp(config).database();
+var noticesRef = db.ref('notices'); 
 
 // set lang
 let lang = 'es'
 Vue.config.lang = ''
 Vue.config.fallbackLang = 'en'
+window.db = db;
 window.moment = moment;
 window.Vue = Vue;
 window._ = _;
@@ -39,10 +55,21 @@ Vue.locale('pt', pt)
 Vue.locale(lang, es)
 
 
+
 Vue.config.lang = lang
 const router = new VueRouter({
   
   routes: [
+    { 
+      path: '/login',
+      name: 'login', 
+      component: Login
+    },
+    { 
+      path: '/news/create',
+      name: 'create', 
+      component: Create
+    },
     { 
       path: '/comunicados-de-prensa/:lang',
       name: 'pressReleases', 
@@ -74,18 +101,23 @@ const router = new VueRouter({
   
 })
 
-new Vue({
+var vm = new Vue({
 
     router,
 
   	el: '#app',
+
+    firebase: {
+      notices: noticesRef.limitToLast(25)
+    },
 
   	components: {
   		TopMenu,
   		Tabs,
   		Tab,
       LanguageSelector,
-      FooterComponent
+      FooterComponent,
+      Login
   	},
 
   	data: {
@@ -158,6 +190,7 @@ new Vue({
 
     watch: {
       '$route'(newRoute, oldRoute) {
+        if(newRoute.name != 'login' && newRoute.name != 'create')
         this.changeLanguage(newRoute.params.lang)
       },
     },
@@ -177,6 +210,8 @@ new Vue({
 
     }
 })
+
+window.vm = vm;
 
 
 

@@ -32,12 +32,3 @@
 		}
 	}
 </script>
-<style>
-	.form-control { 
-		height: 28px; 
-		padding: 4px 13px;
-		color: #fff;
-		background-color: #989898;
-		border:none; 
-	}
-</style>
