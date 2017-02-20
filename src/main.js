@@ -35,7 +35,7 @@ var config = {
 };
 
 var db = Firebase.initializeApp(config).database();
-var noticesRef = db.ref('notices'); 
+var noticesRef = db.ref().child('notices'); 
 
 // set lang
 let lang = 'es'
@@ -158,33 +158,35 @@ var vm = new Vue({
       },
 
       translateRoute(lang){
+        if(this.$route.name != 'login' && this.$route.name != 'create'){
+          
+          // Get current url and currentLanguage
+          let routePath = this.$route.path.split('/')
+          let currentUrl = routePath[1];
+          let currentLang = routePath[2];
 
-        // Get current url and currentLanguage
-        let routePath = this.$route.path.split('/')
-        let currentUrl = routePath[1];
-        let currentLang = routePath[2];
-
-        //console.log('current route is: ' + currentUrl);
-        // Search the index of the current route
-        let indexOfCurrentRoute = null;
-        for( const key in this[currentLang].routes ){
-          if ( this[currentLang].routes[key].indexOf( currentUrl ) != -1 ){
-            //console.log(this[currentLang].routes[key]);
-            indexOfCurrentRoute = key;
+          //console.log('current route is: ' + currentUrl);
+          // Search the index of the current route
+          let indexOfCurrentRoute = null;
+          for( const key in this[currentLang].routes ){
+            if ( this[currentLang].routes[key].indexOf( currentUrl ) != -1 ){
+              //console.log(this[currentLang].routes[key]);
+              indexOfCurrentRoute = key;
+            }
           }
-        }
-        if(indexOfCurrentRoute){
-          //console.log('translated route: ' + this[lang].routes[indexOfCurrentRoute]);
-          router.replace(this[lang].routes[indexOfCurrentRoute]);
-          return;
-        }
-        
-        while( routePath.length >= 3 ){
-          routePath.pop()
-        }
+          if(indexOfCurrentRoute){
+            //console.log('translated route: ' + this[lang].routes[indexOfCurrentRoute]);
+            router.replace(this[lang].routes[indexOfCurrentRoute]);
+            return;
+          }
+          
+          while( routePath.length >= 3 ){
+            routePath.pop()
+          }
 
-        routePath = routePath.join().replace(',', '') + '/' + this.currentLang
-        router.replace('/' + routePath)
+          routePath = routePath.join().replace(',', '') + '/' + this.currentLang
+          router.replace('/' + routePath)
+        }
       }
     },
 

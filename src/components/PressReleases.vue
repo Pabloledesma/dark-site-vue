@@ -1,6 +1,6 @@
 <template>
 <div>
-	<article v-for="notice in noticesOrdered">
+	<article v-for="notice in news">
       <div class="Media">
         <div class="Media__body">
 
@@ -17,11 +17,12 @@
       </div>
       <hr>
 	</article>
+	<p class="text-danger" v-if="!news.lenght">No hay noticias en el idioma seleccionado</p>
 </div>
 
 </template>
 <script>
-import news from '../news'
+// import news from '../news'
 
 	export default {
 		name: 'PressReleases',
@@ -29,23 +30,30 @@ import news from '../news'
 			Event.$on('changeLanguage', (lang) => {
 				if(news[lang]){
 					this.currentLang = lang;
-					this.news = news[lang];
+					//this.news = news[lang];
 				}
 			});
 		},
+
+		firebase(){
+			return {
+				news: db.ref('notices/translations/' + this.currentLang).limitToFirst(25)
+			};
+			
+		},
+
 		data(){
 			return {
-				news: news.es,
-				currentLang: 'es'
+				currentLang: 'en'
 			};
 		},
 
-		computed: {
-			noticesOrdered(){
-				return _.orderBy(this.news, 'date')
-			}
+		// computed: {
+		// 	noticesOrdered(){
+		// 		return _.orderBy(this.news, 'date')
+		// 	}
 			
-		}
+		// }
 	}
 </script>
 

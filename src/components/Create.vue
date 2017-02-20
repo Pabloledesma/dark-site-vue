@@ -1,13 +1,14 @@
 <template>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-8 col-xs-12">
+			<!-- Create news form -->
+			<div class="col-lg-4 col-md-4 col-xs-12">
 				<form class="form">
 					<div class="form-group">
 						<select class="form-control" name="language" v-model="language">
-							<option value="es">ES</option>
-							<option value="us">US</option>
-							<option value="pt">PT</option>
+							<option value="es">{{ $t('optionLabel.spanish') }}</option>
+							<option value="en">{{ $t('optionLabel.english') }}</option>
+							<option value="pt">{{ $t('optionLabel.portuguese') }}</option>
 						</select>
 					</div>
 
@@ -56,7 +57,39 @@
 				</form>
 			</div>
 
-			
+			<!-- News List -->
+			<div class="col-lg-8 col-md-8 col-xs-12">
+			<pre>{{ news }}</pre>
+				<table class="table">
+					<tr>
+						<th>id</th>
+						<th>languages</th>
+						<th>edit</th>
+						<th>delete</th>
+					</tr>
+					<tr v-for="notice in news">
+						<td>{{notice['.key']}}</td>
+						<td colspan="3">
+							<!-- translations -->
+							<table class="table">
+								<tr v-for="(value, key, index) in translations">
+									<td>{{ key }}</td>
+									<td>
+										<a @click.prevent="setEditFormWith(notice)">
+											<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+										</a>
+									</td>
+									<td>
+										<a @click.prevent="removeNotice(notice)">
+											<i class="fa fa-trash" aria-hidden="true"></i>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div><!--row-->
 	</div>
 </template>
@@ -71,21 +104,31 @@
 				body: '',
 				city: '',
 				date: '',
-				error: false
-				
+				error: false,
+				numOfTranslations: 1
 			};
+		},
+
+		firebase(){
+			return {
+				news: db.ref('notices').orderByChild('translations'),
+				translations: db.ref().child('notices').orderByChild('translations')
+			}; 
 		},
 
 		methods: {
 			addNotice(){
 
 				if( this.title && this.body && this.date ){
-					if(db.ref('notices').push({
-						language: this.language,
-						title: this.title,
-						body: this.body,
-						city: this.city,
-						date: this.date
+					if(this.$firebaseRefs.news.push({
+						translations: {
+							[this.language]:{
+								title: this.title,
+								body: this.body,
+								city: this.city,
+								date: this.date
+							}
+						}
 					})){
 						console.log('datos agregados');
 						this.clearForm();
@@ -97,12 +140,28 @@
 				this.error = true;
 			},
 
+			setEditFormWith(notice){
+				console.log('from setEditFormWith:');
+				console.log(notice);
+				this.title = notice.translations[this.language].title;
+				this.body = notice.translations[this.language].body;
+				this.city = notice.translations[this.language].city;
+				this.date = notice.translations[this.language].date;
+			},
+
+
+
+			removeNotice(notice){
+				db.ref('notices').child(notice['.key']).remove()
+			},
+
 			clearForm(){
 				this.title = '';
 				this.body = '';
 				this.city = '';
 				this.date = '';
 			}
-		}
+		},
+
 	}
 </script>
