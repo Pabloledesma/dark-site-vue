@@ -1,28 +1,27 @@
 <template>
 <div>
-	<article v-for="notice in news">
-      <div class="Media">
+	<article v-for="notice in anArray">
+      <div class="Media" v-if="notice.translations[currentLang]">
         <div class="Media__body">
 
-        	<h2>{{notice.title}}</h2>
+        	<h2>{{notice.translations[currentLang].title}}</h2>
 
         	<div class="date-field">
-        		<span class="country">{{ notice.city }}</span>
-        		<span class="date">{{ notice.date }}</span>
+        		<span class="country">{{ notice.translations[currentLang].city }}</span>
+        		<span class="date">{{ notice.translations[currentLang].date }}</span>
         	</div>
 
-          	<div v-html="notice.body" class="content"></div>
+          	<div v-html="notice.translations[currentLang].body" class="content"></div>
 
         </div>
       </div>
       <hr>
 	</article>
-	<p class="text-danger" v-if="!news.lenght">No hay noticias en el idioma seleccionado</p>
+	<!-- <p class="text-danger" v-if="!news.lenght">No hay noticias en el idioma seleccionado</p> -->
 </div>
 
 </template>
 <script>
-// import news from '../news'
 
 	export default {
 		name: 'PressReleases',
@@ -30,14 +29,13 @@
 			Event.$on('changeLanguage', (lang) => {
 				if(news[lang]){
 					this.currentLang = lang;
-					//this.news = news[lang];
 				}
 			});
 		},
 
 		firebase(){
 			return {
-				news: db.ref('notices/translations/' + this.currentLang).limitToFirst(25)
+				anArray: db.ref('notices').orderByKey().limitToFirst(25)
 			};
 			
 		},
@@ -46,14 +44,7 @@
 			return {
 				currentLang: 'en'
 			};
-		},
-
-		// computed: {
-		// 	noticesOrdered(){
-		// 		return _.orderBy(this.news, 'date')
-		// 	}
-			
-		// }
+		}
 	}
 </script>
 
