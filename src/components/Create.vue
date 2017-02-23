@@ -126,20 +126,15 @@
 			addNotice(){
 
 				if( this.title && this.body && this.date ){
-					if(this.$firebaseRefs.news.push({
-						translations: {
-							[this.language]:{
-								title: this.title,
-								body: this.body,
-								city: this.city,
-								date: this.date
-							}
-						}
-					})){
-						console.log('datos agregados');
-						this.clearForm();
-						return;
-					}
+					var noticeKey = this.$firebaseRefs.news.push({ date: this.date }).key
+					this.$firebase.translations.push({
+						notice_id: noticeKey,
+						language: this.language,
+						title: this.title,
+						body: this.body
+					})
+						
+					this.clearForm();
 					
 				}
 
@@ -162,6 +157,8 @@
 
 			selectNotice(notice){
 				this.selectedNotice = notice;
+				this.title = this.selectedNotice.translations.en.title;
+				this.body = this
 			}
 		},
 
