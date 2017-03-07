@@ -1,4 +1,6 @@
 import Vue from 'vue'
+
+import Vuefire from 'vuefire'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
@@ -19,8 +21,11 @@ import news from './news'
 
 
 // install plugin
+Vue.use(Vuefire)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+
+
 
 // set lang
 let lang = 'es'
@@ -79,6 +84,8 @@ new Vue({
     router,
 
   	el: '#app',
+
+
 
   	components: {
   		TopMenu,
