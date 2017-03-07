@@ -161,36 +161,8 @@
 		methods: {
 			showLinks(){
 				this.isActive = (this.isActive) ? false : !this.isActive;
-			},
-
-            getWindowWidth(event) {
-                console.log('width: ' + document.documentElement.clientWidth)
-                return document.documentElement.clientWidth;
-            },
-            
-            getWindowHeight(event) {
-                return document.documentElement.clientHeight;
-            }
-		},
-
-        mounted() {
-            this.$nextTick(function() {
-                window.addEventListener('resize', this.getWindowWidth());
-                window.addEventListener('resize', this.getWindowHeight());
-            })
-
-            console.log(this.windowWidth)
-        },
-    
-        computed: {
-            windowHeight() {
-                    return this.getWindowHeight();
-            },
-            windowWidth() {
-                    return this.getWindowWidth();
-            }
-        }
-
-       
+			}
+          
+		}
     }
 </script>

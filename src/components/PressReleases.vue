@@ -1,6 +1,6 @@
 <template>
 <div v-once>
-	<article v-for="notice in noticesOrdered">
+	<article v-for="notice in news">
       <div class="Media">
         <div class="Media__body">
 
@@ -27,9 +27,10 @@ import news from '../news'
 		name: 'PressReleases',
 		mounted(){
 			Event.$on('changeLanguage', (lang) => {
+				
+				this.currentLang = lang;
 				if(news[lang]){
-					this.currentLang = lang;
-					this.news = news[lang];
+					this.news = news[this.currentLang];
 				}
 			});
 		},
@@ -38,14 +39,14 @@ import news from '../news'
 				news: news.es,
 				currentLang: 'es'
 			};
-		},
-
-		computed: {
-			noticesOrdered(){
-				return _.orderBy(this.news, 'date', 'desc')
-			}
-			
 		}
+
+		// computed: {
+		// 	noticesOrdered(){
+		// 		return _.orderBy(this.news, 'date', 'desc');
+		// 	}
+			
+		// }
 	}
 </script>
 

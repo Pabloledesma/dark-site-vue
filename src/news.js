@@ -5,7 +5,7 @@ let news = {
             title: 'Copa Airlines Colombia abre ruta directa Pereira-San Andrés, consolidándose así como El mayor operador que sirve a la isla',
             body: `
                     <ul>
-                    <li>El próximo 15 de junio Copa Airlines empezará a operar esta nueva ruta directa y sin escalas tres veces por semana con horarios ideales para los viajeros.</li>
+                    <li>El próximo 16 de junio Copa Airlines empezará a operar esta nueva ruta directa y sin escalas tres veces por semana con horarios ideales para los viajeros.</li>
                     <li>Con la nueva ruta directa se espera movilizar alrededor de 25.000 pasajeros al año entre los dos destinos.</li>
                     </ul>
                     
