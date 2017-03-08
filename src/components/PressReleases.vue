@@ -37,7 +37,7 @@
 
 		firebase(){
 			return {
-				notices: db.ref('notices').orderByKey().limitToFirst(25)
+				notices: db.ref().child('translations/' + this.currentLang)
 			};
 			
 		},

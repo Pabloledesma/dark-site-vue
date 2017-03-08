@@ -27,15 +27,14 @@ Vue.use(VueRouter)
 Vue.use(VueI18n)
 
 var config = {
-    apiKey: "AIzaSyDwB6HDEeLPprACvtOE72FBnweOAwPrTUo",
-    authDomain: "darksite-cd058.firebaseapp.com",
-    databaseURL: "https://darksite-cd058.firebaseio.com",
-    storageBucket: "darksite-cd058.appspot.com",
-    messagingSenderId: "924962095903"
+    apiKey: "AIzaSyCEgo_o0RK9uNJZsmRmvZr4E4UBi9cy92E",
+    authDomain: "dark-site.firebaseapp.com",
+    databaseURL: "https://dark-site.firebaseio.com",
+    storageBucket: "dark-site.appspot.com",
+    messagingSenderId: "294167686491"
 };
 
 var db = Firebase.initializeApp(config).database();
-var noticesRef = db.ref().child('notices'); 
 
 // set lang
 let lang = 'es'
@@ -107,10 +106,6 @@ var vm = new Vue({
 
   	el: '#app',
 
-    firebase: {
-      notices: noticesRef.limitToLast(25)
-    },
-
   	components: {
   		TopMenu,
   		Tabs,
@@ -133,28 +128,11 @@ var vm = new Vue({
 
     methods: {
       changeLanguage(lang){
-        //this.$emit('changed', lang)
         this.currentLang = lang;
         this.translateRoute(lang)
         Vue.config.lang = lang;
         window.moment = moment
         window.lang = lang;
-
-        //formato del tiempo
-        // switch(lang){
-        //   case 'en':
-        //     moment.locale('en-ca')
-        //     break
-        //   case 'es':
-        //     moment.locale('es')
-        //     break
-        //   case 'pt':
-        //     moment.locale('pt-br')
-        //     break
-        // }
-
-
-        
       },
 
       translateRoute(lang){
@@ -190,6 +168,9 @@ var vm = new Vue({
       }
     },
 
+    /**
+    * For this function we could create an object with the routes that do not need to be translated
+    **/
     watch: {
       '$route'(newRoute, oldRoute) {
         if(newRoute.name != 'login' && newRoute.name != 'create')

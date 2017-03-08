@@ -8,11 +8,11 @@
 			<div class="col-lg-4 col-md-4 col-xs-12">
 				<form class="form">
 					<div class="form-group">
-						<div class="checkbox">
+						<!-- <div class="checkbox">
 						    <label>
 						      	<input type="checkbox" v-model="addTranslation" @click="clearForm"> Add translation
 						    </label>
-					  	</div>
+					  	</div> -->
 						<select class="form-control" name="language" v-model="language">
 							<option value="es">{{ $t('optionLabel.spanish') }}</option>
 							<option value="en">{{ $t('optionLabel.english') }}</option>
@@ -44,9 +44,9 @@
 						<input 
 							class="form-control" 
 							type="text" 
-							name="city" 
-							placeholder="City" 
-							v-model.trim="city">
+							name="location" 
+							placeholder="Location" 
+							v-model.trim="location">
 					</div>
 
 					<div class="form-group">
@@ -66,26 +66,20 @@
 			</div>
 
 			<!-- News List -->
-			<!-- <div class="col-lg-8 col-md-8 col-xs-12">
+			<div class="col-lg-8 col-md-8 col-xs-12">
 				<table class="table table-striped">
 					<tr>
-						<th>id</th>
-						<th>languages</th>
+						<th>date</th>
+						<th>location</th>
 						<th>delete</th>
 					</tr>
 					<tr 
-						v-for="notice in news" 
+						v-for="notice in notices" 
 						@click="selectNotice(notice)" 
 						:class="{'selected': selectedNotice === notice }"
 					>
-						<td>{{notice['.key']}}</td>
-						<td>
-							<ul>
-								<li v-if="notice.translations.es">es</li>
-								<li v-if="notice.translations.en">en</li>
-								<li v-if="notice.translations.pt">pt</li>
-							</ul>
-						</td>
+						<td>{{notice.date}}</td>
+						<td>{{notice.location}}</td>
 						<td>
 							<a @click.prevent="removeNotice(notice)">
 								<i class="fa fa-trash" aria-hidden="true"></i>
@@ -93,11 +87,13 @@
 						</td>
 					</tr>
 				</table>
-			</div> -->
+				<pre>{{ translations }}</pre>
+			</div>
 		</div><!--row-->
 	</div>
 </template>
 <script>
+import firebase from 'firebase'
 
 	export default {
 		name: 'create-notice-component',
@@ -117,40 +113,70 @@
 
 		firebase(){
 			return {
-				news: db.ref('notices'),
+				notices: db.ref('notices'),
 				translations: db.ref('translations')
 			}; 
 		},
 
 		methods: {
+
+			/**
+			* Saves a new notice to the firebase DB
+			**/
 			addNotice(){
-				// Follow the example in the documentation
-				if( this.location && this.date && this.title && this.body ){
-					let noticeKey = this.$firebaseRefs.news.push({ 
-						date: this.date,
-						location: this.location 
-					})
 
-					let translationKey = this$firebaseRefs.translations.push({
-						notice_id: noticeKey,
-						language: this.language,
-						title: this.title,
-						body: this.body
-					})
+				//let uid = firebase.auth().currentUser.Uid;
 
-				}
+				let notice = {
+					//user_id: uid, 
+					date: this.date,
+					location: this.location
+				};
 
-				if( noticeKey && translationKey ){
-					this.clearForm();
-					return;
-				}
+				// Get a key for a new notice
+				let newNoticeKey = db.ref().child('notices').push().key;
+				// Get a key for a new translation
+				let newTranslationKey = db.ref().child('translations').push().key;
 
-				/*** TEMPORARY ***/	
-				this.error = true;
+				let translation = {
+					notice_id: newNoticeKey,
+					language: this.language,
+					title: this.title,
+					body: this.body
+				};
+
+				let updates = {};
+				updates['/notices/' + newNoticeKey] = notice;
+				updates['/translations/' + newTranslationKey] = translation;
+				
+				db.ref().update(updates)
+					.then(this.clearForm())
+					.catch(error => console.log(error))
+				
+			},
+
+			/**
+			* It add a translation to an existing notice
+			**/
+			addTranslation(notice){
+				let translation = {
+					notice_id: notice.key,
+					language: this.language,
+					title: this.title,
+					body: this.body
+				};
+
+				let newTranslationKey = db.ref().child('translations').push().key;
+
+				let updates = {};
+				updates['/translations/' + newTranslationKey] = translation;
+				db.ref().update(updates).catch(error => console.log(error))
 			},
 
 
 			removeNotice(notice){
+				// Delete all translations
+
 				db.ref('notices').child(notice['.key']).remove()
 			},
 
@@ -162,9 +188,13 @@
 			},
 
 			selectNotice(notice){
-				this.selectedNotice = notice;
-				this.title = this.selectedNotice.translations.en.title;
-				this.body = this
+				//console.log(notice)
+				// Select tranlations for this notice
+				let translations = $firebaseRefs.translations.orderByKey().equalTo(notice['.key']);
+				console.log(translations);
+				// this.selectedNotice = notice;
+				// this.title = this.selectedNotice.translations.en.title;
+				// this.body = this
 			}
 		},
 
