@@ -190,8 +190,9 @@ import firebase from 'firebase'
 			selectNotice(notice){
 				//console.log(notice)
 				// Select tranlations for this notice
-				let translations = $firebaseRefs.translations.orderByKey().equalTo(notice['.key']);
-				console.log(translations);
+				this.$bindAsArray('translations', db.ref('translations').orderByChild('notice_id').equalTo(notice['.key']));
+
+				console.log(this.translations);
 				// this.selectedNotice = notice;
 				// this.title = this.selectedNotice.translations.en.title;
 				// this.body = this
