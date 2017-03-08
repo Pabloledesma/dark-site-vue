@@ -1,6 +1,7 @@
 <template>
 <div>
-	<article v-for="notice in anArray">
+	<pre>{{ notices }}</pre>
+	<!-- <article v-for="notice in anArray">
       <div class="Media" v-if="notice.translations[currentLang]">
         <div class="Media__body">
 
@@ -16,12 +17,13 @@
         </div>
       </div>
       <hr>
-	</article>
+	</article> -->
 	<!-- <p class="text-danger" v-if="!news.lenght">No hay noticias en el idioma seleccionado</p> -->
 </div>
 
 </template>
 <script>
+/** It show all notices in cronologic order **/
 
 	export default {
 		name: 'PressReleases',
@@ -35,7 +37,7 @@
 
 		firebase(){
 			return {
-				anArray: db.ref('notices').orderByKey().limitToFirst(25)
+				notices: db.ref('notices').orderByKey().limitToFirst(25)
 			};
 			
 		},

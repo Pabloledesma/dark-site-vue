@@ -66,7 +66,7 @@
 			</div>
 
 			<!-- News List -->
-			<div class="col-lg-8 col-md-8 col-xs-12">
+			<!-- <div class="col-lg-8 col-md-8 col-xs-12">
 				<table class="table table-striped">
 					<tr>
 						<th>id</th>
@@ -93,7 +93,7 @@
 						</td>
 					</tr>
 				</table>
-			</div>
+			</div> -->
 		</div><!--row-->
 	</div>
 </template>
@@ -106,7 +106,7 @@
 				language: 'es',
 				title: '',
 				body: '',
-				city: '',
+				location: '',
 				date: '',
 				error: false,
 				numOfTranslations: 1, 
@@ -117,27 +117,35 @@
 
 		firebase(){
 			return {
-				news: db.ref('notices').orderByChild('translations'),
-				translations: db.ref().child('notices').orderByChild('translations')
+				news: db.ref('notices'),
+				translations: db.ref('translations')
 			}; 
 		},
 
 		methods: {
 			addNotice(){
+				// Follow the example in the documentation
+				if( this.location && this.date && this.title && this.body ){
+					let noticeKey = this.$firebaseRefs.news.push({ 
+						date: this.date,
+						location: this.location 
+					})
 
-				if( this.title && this.body && this.date ){
-					var noticeKey = this.$firebaseRefs.news.push({ date: this.date }).key
-					this.$firebase.translations.push({
+					let translationKey = this$firebaseRefs.translations.push({
 						notice_id: noticeKey,
 						language: this.language,
 						title: this.title,
 						body: this.body
 					})
-						
-					this.clearForm();
-					
+
 				}
 
+				if( noticeKey && translationKey ){
+					this.clearForm();
+					return;
+				}
+
+				/*** TEMPORARY ***/	
 				this.error = true;
 			},
 
@@ -147,12 +155,10 @@
 			},
 
 			clearForm(){
-				if(this.addTranslation){
-					this.title = '';
-					this.body = '';
-					this.city = '';
-					this.date = '';
-				}
+				this.title = '';
+				this.body = '';
+				this.city = '';
+				this.date = '';
 			},
 
 			selectNotice(notice){
