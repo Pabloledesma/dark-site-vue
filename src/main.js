@@ -3,7 +3,6 @@ import VueFire from 'vuefire'
 import db from '../firebase-setup'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
-import _ from 'lodash'
 import moment from 'moment'
 import Login from './components/Login.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
@@ -14,14 +13,12 @@ import FooterComponent from './components/FooterComponent.vue'
 import es from './locales/es'
 import pt from './locales/pt'
 import en from './locales/en'
-import news from './news'
 import routes from './routes.js'
 
 // install plugin
 Vue.use(VueFire)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
-
 
 // set lang
 let lang = 'es'
@@ -30,8 +27,6 @@ Vue.config.fallbackLang = 'en'
 window.db = db;
 window.moment = moment;
 window.Vue = Vue;
-window._ = _;
-window.news = news;
 window.lang = lang;
 window.Event = new Vue();
 
@@ -39,8 +34,6 @@ window.Event = new Vue();
 Vue.locale('en', en)
 Vue.locale('pt', pt)
 Vue.locale(lang, es)
-
-
 
 Vue.config.lang = lang
 const router = new VueRouter(routes)
@@ -53,7 +46,7 @@ var vm = new Vue({
 
   	components: {
   		TopMenu,
-  		Tabs,
+  		Tabs, 
   		Tab,
       LanguageSelector,
       FooterComponent,
@@ -134,8 +127,6 @@ var vm = new Vue({
       if(this.$route.params.lang !== undefined && this.$route.params.lang.length == 2){
         this.changeLanguage(this.$route.params.lang);
       }
-
-
     }
 })
 
