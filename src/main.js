@@ -1,18 +1,13 @@
 import Vue from 'vue'
-import Firebase from 'firebase'
 import VueFire from 'vuefire'
+import db from '../firebase-setup'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import _ from 'lodash'
 import moment from 'moment'
 import Login from './components/Login.vue'
-import Create from './components/Create.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
 import TopMenu from './components/TopMenu.vue'
-import LatestNews from './components/LatestNews.vue'
-import PressReleases from './components/PressReleases.vue'
-import Assistance from './components/Assistance.vue'
-import About from './components/About.vue'
 import Tabs from './components/Tabs.vue'
 import Tab from './components/Tab.vue'
 import FooterComponent from './components/FooterComponent.vue'
@@ -20,21 +15,13 @@ import es from './locales/es'
 import pt from './locales/pt'
 import en from './locales/en'
 import news from './news'
+import routes from './routes.js'
 
 // install plugin
 Vue.use(VueFire)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 
-var config = {
-    apiKey: "AIzaSyCEgo_o0RK9uNJZsmRmvZr4E4UBi9cy92E",
-    authDomain: "dark-site.firebaseapp.com",
-    databaseURL: "https://dark-site.firebaseio.com",
-    storageBucket: "dark-site.appspot.com",
-    messagingSenderId: "294167686491"
-};
-
-var db = Firebase.initializeApp(config).database();
 
 // set lang
 let lang = 'es'
@@ -56,49 +43,7 @@ Vue.locale(lang, es)
 
 
 Vue.config.lang = lang
-const router = new VueRouter({
-  
-  routes: [
-    { 
-      path: '/login',
-      name: 'login', 
-      component: Login
-    },
-    { 
-      path: '/news/create',
-      name: 'create', 
-      component: Create
-    },
-    { 
-      path: '/comunicados-de-prensa/:lang',
-      name: 'pressReleases', 
-      component: PressReleases,
-      alias: [
-        '/press-releases/:lang', 
-        '/comunicados-da-imprensa/:lang'
-      ] 
-    },
-    { 
-      path: '/sobre-nosotros/:lang',
-      name: 'aboutUs', 
-      component: About,
-      alias: ['/about-us/:lang', '/acerca-de-copa-airlines/:lang'] 
-    },
-    { 
-      path: '/assistance-to-family/:lang', 
-      name: 'assistanceToFamily',
-      component: Assistance,
-      alias: ['/assistencia-a-familia/:lang', '/asistencia-familiar/:lang'] 
-    },
-    { 
-      path: '/latest-news/:lang', 
-      name: 'latestNews',
-      component: LatestNews,
-      alias: ['ultimas-noticias/:lang', '/ultimas-noticias/:lang']
-    }
-  ]
-  
-})
+const router = new VueRouter(routes)
 
 var vm = new Vue({
 
