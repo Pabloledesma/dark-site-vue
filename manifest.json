@@ -1,6 +1,8 @@
 {
 	"name": "Emergency Site for Copa Airlines",
-	"short name": "Dark Site",
+	"short_name": "Dark Site",
+	"display": "fullscreen",
+  	"orientation": "landscape",
 	"icons": [
 		{
 			"src": "src/assets/img/android-icon-192x192.png",
@@ -55,11 +57,11 @@
 
 	],
 	"start_url": "index.html",
-	"display": "standalone",
 	"background_color": "#676767",
 	"theme_color": "#ccc",
 	"serviceworker": {
 		"src": "/service-worker.js",
 		"use_cache": true
 	}
+	
 }
