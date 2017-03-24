@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "darksite-cd058"
+    "default": "darksite-cd058",
+    "staging": "dark-site-pre-production"
   }
 }
