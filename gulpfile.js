@@ -11,7 +11,9 @@ gulp.task('generate-service-worker', function(callback){
 		staticFileGlobs: [
 			'./src/assets/img/*.{png,jpg,gif,svg}', 
 			'./src/assets/css/*.css',
-			'./dist/*.js'
+			'./dist/*.js',
+			'./index.html',
+			'./404.html'
 		],
 		stripPrefix: dest
 	}, callback);
