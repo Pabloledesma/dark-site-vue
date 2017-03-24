@@ -1,0 +1,31 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\pablo\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] CLI Version:  3.5.0
+[debug] Platform:     win32
+[debug] Node Version: v7.4.0
+[debug] Time:         Thu Mar 23 2017 23:42:58 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/yUey2xWyp-sruh4bU4TlBlUhJL3wlkY9kn3ynvvvzuM',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Mar 23 2017 23:42:58 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/dark-site-pre-production  
+ Thu Mar 23 2017 23:42:59 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/dark-site-pre-production/tokens  
+ Thu Mar 23 2017 23:43:01 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'dark-site-pre-production'...
+[info] 
+[info] i  deploying database, hosting
+[info] +  database: rules ready to deploy.
+[info] i  hosting: preparing / directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/dark-site-pre-production/uploads/-Kfybq5MOowIyomQGUnN?fileCount=11844&message=  
+ Thu Mar 23 2017 23:43:15 GMT-0500 (Hora est. Pacífico, Sudamérica)
